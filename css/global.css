@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Zen+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Zen+Antique&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+:root {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  --header-font: "Zen Antique", serif;
+  --paragraph-font: "Lato", sans-serif;
+  --top-text-color: #ad8a48;
+  --header-text-color: #312313;
+  --background-top-header-color: #ece2d5;
+  --paragraph-color: #685a45;
+  --highlight-text: #56684E
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

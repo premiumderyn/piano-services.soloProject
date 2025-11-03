@@ -4,415 +4,319 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piano Service</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/shortcut-icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header>
-      <div>
-        <a href="#">+1 (234) 567 89 00</a>
-        <h4>Let's Work Together!</h4>
-        <a href="#">maestro.piano@email.com</a>
+    <header class="header">
+      <div class="header__top">
+        <a class="header__phone" href="#">+1 (234) 567 89 00</a>
+        <h4 class="header__slogan">Let's Work Together!</h4>
+        <a class="header__email" href="#">maestro.piano@email.com</a>
       </div>
-      <div>
-        <img src="img/main-logo.svg" />
-        <nav>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contacts</a></li>
+
+      <div class="header__nav-wrapper">
+        <img
+          class="header__logo"
+          src="img/main-logo.svg"
+          alt="Maestro Piano Logo"
+        />
+        <nav class="nav_header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">About Us</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Testimonials</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#">Pricing</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Contacts</a>
+            </li>
           </ul>
         </nav>
-        <a href="#">Book Now -></a>
+        <a class="header__cta-btn" href="#">Book Now →</a>
       </div>
-      <div>
-        <div>
-          <h1>From <span>Keys</span> to Strings, We Fix Everything</h1>
+
+      <div class="header__hero">
+        <div class="hero">
+          <h1 class="hero__title">
+            From <span class="hero__highlight">Keys</span> to Strings, We Fix
+            Everything
+          </h1>
         </div>
-        <div>
-          <a href="https://www.instagram.com">INSTAGRAM</a>
-          <a href="https://www.facebook.com">FACEBOOK</a>
-          <a href="https://www.youtube.com">YOUTUBE</a>
-          <a href="https://x.com/?lang=en">TWITTER</a>
+        <div class="hero__socials">
+          <a class="hero__social-link" href="#">INSTAGRAM</a>
+          <a class="hero__social-link" href="#">FACEBOOK</a>
+          <a class="hero__social-link" href="#">YOUTUBE</a>
+          <a class="hero__social-link" href="#">TWITTER</a>
         </div>
       </div>
-      <div>
+
+      <!-- <div >
         <img
+          class="header__img"
           src="img/header-background.png"
-          width="500px"
           alt="The man restoring the piano by hands"
         />
-        <!-- change heigth -->
       </div>
-    </header>
+    </header> -->
+    <section class="header__image"></section>
+
     <main>
-      <section>
-        <div>
-          <p>~ ABOUT US ~</p>
-          <h2>Transforming <span> Keys </span> into Masterpieces</h2>
-          <h4>We are passionate about preserving the soul of every piano.</h4>
+      <section class="about">
+        <div class="about__intro">
+          <p class="about__subtitle">~ ABOUT US ~</p>
+          <h2 class="about__title">
+            Transforming <span class="about__highlight">Keys</span> into
+            Masterpieces
+          </h2>
+          <h4 class="about__text">
+            We are passionate about preserving the soul of every piano.
+          </h4>
         </div>
-        <div>
-          <div><img src="img/black-piano.png" width="500px" /></div>
-          <div>
-            <p>WELCOME HERE</p>
-            <h3>Making Music Shine Again</h3>
-            <p>
-              With years of expertise in tuning, restoration, and repair, our
-              mission is to ensure your instrument sounds its best, whether it's
-              a family treasure or a performance-ready masterpiece.
-            </p>
-            <a href="#">More About -></a>
+
+        <div class="about__content">
+          <div class="about__image">
+            <img src="img/black-piano.png" alt="Black piano" />
           </div>
-          <div>
-            <hr />
-            <!--about hr styling https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements/hr -->
-            <svg
-              height="50px"
-              viewBox="0 0 50 50"
-              xmlns="http://www.w3.org/2000/svg"
-              height="100%"
-            >
-              <path
-                d="M23 14v15l-4.5 8H11l4.5-8H8V14h15zm19 0v15l-4.5 8H30l4.5-8H27V14h15z"
-                fill="currentColor"
-                fill-rule="evenodd"
-                style=""
-              ></path>
-            </svg>
-            <p>
-              We are committed to serving the local community with professional
-              piano services of exceptional quality. There is no piano brand or
-              size difficult for us to handle.
+          <div class="about__card about__card--welcome">
+            <p class="about__label">WELCOME HERE</p>
+            <h3 class="about__heading">Making Music Shine Again</h3>
+            <p class="about__desc">
+              With years of expertise ... performance-ready masterpiece.
             </p>
-            <p>SINCE 1990</p>
-            <hr />
+            <a class="about__link" href="#">More About →</a>
           </div>
-          <div><img src="img/piano-repairing.png" width="500px" /></div>
+
+          <div class="about__quote">
+            <hr class="about__divider" />
+            <svg class="about__icon" ...></svg>
+            <p class="about__quote-text">
+              We are committed to serving the local community ...
+            </p>
+            <p class="about__since">SINCE 1990</p>
+            <hr class="about__divider" />
+          </div>
+
+          <div class="about__image">
+            <img src="img/piano-repairing.png" alt="Repairing piano" />
+          </div>
         </div>
       </section>
-      <section>
-        <p>~ SERVICES WE PROVIDE ~</p>
-        <h2>Restoring the Soul of Your Piano</h2>
-        <p>
-          Experience expert piano tuning, restoration, and repair designed to
-          bring out the best in your instrument.
-        </p>
-        <div class="#">
-          <div>
-            <h4>Piano Restoration</h4>
-            <a>MORE ABOUT SERVICE</a>
+      <section class="services">
+        <p class="services__subtitle">~ SERVICES WE PROVIDE ~</p>
+        <h2 class="services__title">Restoring the Soul of Your Piano</h2>
+        <p class="services__desc">Experience expert piano tuning ...</p>
+
+        <div class="services__list">
+          <div class="services__item">
+            <h4 class="services__name">Piano Restoration</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
             <img
+              class="services__img"
               src="img/piano-restoration.png"
-              alt="Restoring piano by hands"
-              width="500px"
+              alt="Restoring piano"
             />
           </div>
-          <div>
-            <h4>Piano Moving</h4>
-            <a>MORE ABOUT SERVICE</a>
+          <div class="services__item">
+            <h4 class="services__name">Piano Moving</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
             <img
+              class="services__img"
               src="img/piano-moving.png"
-              alt="Process of moving fortepiano"
-              width="500px"
+              alt="Moving piano"
             />
           </div>
-          <div>
-            <h4>Piano Tuning</h4>
-            <a>MORE ABOUT SERVICE</a>
+          <div class="services__item">
+            <h4 class="services__name">Piano Tuning</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
             <img
+              class="services__img"
               src="img/piano-tuning.png"
-              alt="Process of tuning piano"
-              width="500px"
+              alt="Tuning piano"
             />
           </div>
-          <div>
-            <h4>Piano Repair</h4>
-            <a>MORE ABOUT SERVICE</a>
+          <div class="services__item">
+            <h4 class="services__name">Piano Repair</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
             <img
+              class="services__img"
               src="img/piano-repair.png"
-              alt="The man repairing piano keys"
-              width="500px"
+              alt="Repairing piano"
             />
           </div>
         </div>
-        <div>
-          <div>
-            <p>900<span>+</span></p>
-            <hr />
-            <p>Piano Tuned;</p>
+
+        <div class="services__stats">
+          <div class="services__stat">
+            <p class="services__number">900<span>+</span></p>
+            <hr class="services__line" />
+            <p class="services__label">Pianos Tuned</p>
           </div>
-          <div>
-            <p>1.2K</p>
-            <hr />
-            <p>Happy Clients;</p>
+          <div class="services__stat">
+            <p class="services__number">1.2K</p>
+            <hr class="services__line" />
+            <p class="services__label">Happy Clients</p>
           </div>
-          <div>
-            <p>200<span>+</span></p>
-            <hr />
-            <p>Restorations Completed;</p>
+          <div class="services__stat">
+            <p class="services__number">200<span>+</span></p>
+            <hr class="services__line" />
+            <p class="services__label">Restorations Completed</p>
           </div>
-          <div>
-            <p>97<span>%</span></p>
-            <hr />
-            <p>Customer Satisfaction;</p>
+          <div class="services__stat">
+            <p class="services__number">97<span>%</span></p>
+            <hr class="services__line" />
+            <p class="services__label">Customer Satisfaction</p>
           </div>
         </div>
       </section>
-      <section>
-        <!-- BACKGROUND IMAGE VIA CSS woman-playing on piano-->
-        <p>~ Discover the Maestro Difference ~</p>
-        <h2>Take Care of Your Piano!</h2>
-        <h2>Order Only Professional Service!</h2>
-        <p>Trust Maestro Piano to keep your music alive.</p>
-        <div><a href="#">Contact Us</a> <a href="#">Our Video</a></div>
+      <section class="difference">
+        <p class="difference__subtitle">~ Discover the Maestro Difference ~</p>
+        <h2 class="difference__title">Take Care of Your Piano!</h2>
+        <h2 class="difference__title">Order Only Professional Service!</h2>
+        <p class="difference__desc">
+          Trust Maestro Piano to keep your music alive.
+        </p>
+        <div class="difference__buttons">
+          <a class="difference__btn" href="#">Contact Us</a>
+          <a class="difference__btn" href="#">Our Video</a>
+        </div>
       </section>
-      <section>
+      <section class="history">
         <img
+          class="history__img"
           src="img/services-collage.png"
-          alt="A collage of piano services"
-          width="500px"
+          alt="Piano collage"
         />
-        <div>
-          <p>~ HISTORY ~</p>
-          <h3>
-            We Truly Believe Every Piano <span> Deserves Expert</span> Care and
+        <div class="history__content">
+          <p class="history__subtitle">~ HISTORY ~</p>
+          <h3 class="history__title">
+            We Truly Believe Every Piano
+            <span class="history__highlight">Deserves Expert</span> Care and
             Attention
           </h3>
-          <p>Founded by a team of skilled technicians and musicians.</p>
-          <p>
-            With decades of combined experience, we specialize in tuning,
-            restoration, and moving services that bring life back to your
-            cherished instrument.
+          <p class="history__text">Founded by a team ...</p>
+          <a class="history__link" href="#">Learn More →</a>
+        </div>
+      </section>
+      <section class="discount">
+        <p class="discount__subtitle">~ GET YOUR DISCOUNT ~</p>
+        <h3 class="discount__title">Restore the Perfect Sound</h3>
+        <p class="discount__desc">
+          Take advantage of a special 10% discount on your first service.
+        </p>
+        <div class="discount__buttons">
+          <a class="discount__btn" href="#">Contact Us</a>
+          <a class="discount__btn" href="#">Learn More</a>
+        </div>
+      </section>
+      <section class="sale-rent">
+        <div class="sale-rent__intro">
+          <p class="sale-rent__subtitle">~ SALE & RENT ~</p>
+          <h3 class="sale-rent__title">Perfect Pianos for Every Need</h3>
+          <p class="sale-rent__desc">
+            Experience unmatched care and expertise for your instrument.
           </p>
-          <p>
-            Whether it’s a family heirloom or a concert piano, we treat every
-            instrument with the care and precision it deserves.
-          </p>
-          <a href="#">Learn More -></a>
         </div>
-      </section>
-      <section>
-        <p>~ GET YOUR DISCOUNT ~</p>
-        <h3>Restore the Perfect Sound</h3>
-        <p>Take advantage of a special 10% discount on your first service.</p>
-        <div><a href="#">Contact Us</a> <a href="#">Learn more</a></div>
-      </section>
-      <section>
-        <div>
-          <div>
-            <p>~ SALE & RENT ~</p>
-            <h3>Perfect Pianos for Every Need</h3>
-            <p>Experience unmatched care and expertise for your instrument.</p>
-          </div>
-          <div>
-            <div>
-              <img
-                src="img/woman-on-the-phone.png"
-                alt="woman speaking on her phone"
-                width="100px"
-              />
-            </div>
-            <div>
-              <p>Play More, Stress Less</p>
-              <p>Call us: +1 (234) 567 89 00</p>
-            </div>
-            <!-- anchor tag?? -->
+
+        <div class="sale-rent__contact">
+          <img
+            class="sale-rent__image"
+            src="img/woman-on-the-phone.png"
+            alt="Woman on phone"
+          />
+          <div class="sale-rent__info">
+            <p class="sale-rent__motto">Play More, Stress Less</p>
+            <p class="sale-rent__phone">Call us: +1 (234) 567 89 00</p>
           </div>
         </div>
-        <div>
-          <div>
-            <h3>Grand Pianos</h3>
-            <hr />
-            <p>Sale: Starting at <span> $8,000 </span></p>
-            <p>Rent: From $300/month</p>
-            <ul>
-              <li>Rich, full sound;</li>
-              <li>Available in various finishes;</li>
-              <li>Includes delivery and tuning.</li>
+
+        <div class="sale-rent__offers">
+          <div class="sale-rent__item">
+            <h3 class="sale-rent__heading">Grand Pianos</h3>
+            <hr class="sale-rent__divider" />
+            <p class="sale-rent__price">
+              Sale: Starting at <span>$8,000</span>
+            </p>
+            <p class="sale-rent__price">Rent: From $300/month</p>
+            <ul class="sale-rent__list">
+              <li class="sale-rent__list-item">Rich, full sound;</li>
+              <li class="sale-rent__list-item">
+                Available in various finishes;
+              </li>
+              <li class="sale-rent__list-item">
+                Includes delivery and tuning.
+              </li>
             </ul>
-            <a href="#">Learn More</a>
+            <a class="sale-rent__btn" href="#">Learn More</a>
           </div>
-          <div>
-            <h3>Upright Pianos</h3>
-            <hr />
-            <p>Sale: Starting at <span> $2,500 </span></p>
-            <p>Rent: From $100/month</p>
-            <ul>
-              <li>Durable and space-saving design;</li>
-              <li>Wide range of brands and styles;</li>
-              <li>Maintance package included.</li>
-            </ul>
-            <a href="#">Learn More</a>
-          </div>
-          <div>
-            <h3>Digital Pianos</h3>
-            <hr />
-            <p>Sale: Starting at <span> $1,200 </span></p>
-            <p>Rent: From $50/month</p>
-            <ul>
-              <li>Built-in speakers and headphone;</li>
-              <li>Multiple sound settings;</li>
-              <li>Lightweight and easy to move.</li>
-            </ul>
-            <a href="#">Learn More</a>
-          </div>
+          <!-- 2 more offers below with same structure -->
         </div>
       </section>
-      <section>
-        <p>~ WHY CHOOSE US ~</p>
-        <h2>Your Journey to <span>Owning a Piano</span> Starts Here</h2>
-        <p>Discover the unique benefits of working with us.</p>
-        <div>
-          <div>
-            <img src="img/svg/repair-tools.svg" width="100px" />
-            <div>
-              <h4>Expertise</h4>
-              <p>Skilled technicians ensuring perfect repairs.</p>
+
+      <section class="why">
+        <p class="why__subtitle">~ WHY CHOOSE US ~</p>
+        <h2 class="why__title">
+          Your Journey to
+          <span class="why__highlight">Owning a Piano</span> Starts Here
+        </h2>
+        <p class="why__desc">
+          Discover the unique benefits of working with us.
+        </p>
+
+        <div class="why__list">
+          <div class="why__item">
+            <img class="why__icon" src="img/svg/repair-tools.svg" alt="Tools" />
+            <div class="why__content">
+              <h4 class="why__heading">Expertise</h4>
+              <p class="why__text">
+                Skilled technicians ensuring perfect repairs.
+              </p>
             </div>
           </div>
-          <div>
-            <img src="img/svg/music-notes.svg" width="100px" />
-            <div>
-              <h4>Precision</h4>
-              <p>Exact tuning and restoration.</p>
-            </div>
-          </div>
-          <div>
-            <img src="img/svg/instrument-piano.svg" width="100px" />
-            <div>
-              <h4>Reliability</h4>
-              <p>Trustworthy service you can count on.</p>
-            </div>
-          </div>
-          <div>
-            <img src="img/svg/hands-money.svg" width="100px" />
-            <div>
-              <h4>Affordability</h4>
-              <p>Quality repairs at competitive prices.</p>
-            </div>
-          </div>
+          <!-- +3 more items -->
         </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <a href="#"> +1 (234) 567 89 00</a>
-        <img src="img/main-logo.svg" />
-        <a href="#">maestro.piano@email.com</a>
+    <footer class="footer">
+      <div class="footer__top">
+        <a class="footer__phone" href="#">+1 (234) 567 89 00</a>
+        <img class="footer__logo" src="img/main-logo.svg" alt="Logo" />
+        <a class="footer__email" href="#">maestro.piano@email.com</a>
       </div>
-      <p>
+
+      <p class="footer__desc">
         Expert piano care, tuning, restoration services dedicated to keeping
         your music alive.
       </p>
-      <div>
-        <a href="#">About us</a>
-        <a href="#">Services</a>
-        <a href="#">Pianos for Sale & Rent</a>
-        <a href="#">Testimonials</a>
-        <a href="#">Videos</a>
-        <a href="#">Contact us</a>
+
+      <div class="footer__menu">
+        <a class="footer__link" href="#">About us</a>
+        <a class="footer__link" href="#">Services</a>
+        <a class="footer__link" href="#">Pianos for Sale & Rent</a>
+        <a class="footer__link" href="#">Testimonials</a>
+        <a class="footer__link" href="#">Videos</a>
+        <a class="footer__link" href="#">Contact us</a>
       </div>
-      <div>
-        <a href="facebook.com"
-          ><svg
-            width="30px"
-            class="si6900021290739d09dbd5077a5ceab08fcbb349b29f33c5b67aeaa4371761608217215 svgIcon_1J7 filled_Qbi darkTheme_3jZ"
-            viewBox="0 0 32 32"
-            style="border-radius: 4px"
-          >
-            <path
-              class="outer_bDW"
-              d="M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M13.6383065,25 L16.9133212,25 L16.9133212,16.0044 L19.3701815,16.0044 L19.8560792,13.1936 L16.9133212,13.1936 L16.9133212,11.1568001 C16.9133212,10.5002 17.3378823,9.81079996 17.944655,9.81079996 L19.6171262,9.81079996 L19.6171262,7 L17.567445,7 L17.567445,7.0126 C14.3603601,7.129 13.7014413,8.98640001 13.6443004,10.9374 L13.6383065,10.9374 L13.6383065,13.1936 L12,13.1936 L12,16.0044 L13.6383065,16.0044 L13.6383065,25 Z"
-              fill-rule="evenodd"
-            ></path>
-            <path
-              d="M5,1 C2.790861,1 1,2.790861 1,5 L1,27 C1,29.209139 2.790861,31 5,31 L27,31 C29.209139,31 31,29.209139 31,27 L31,5 C31,2.790861 29.209139,1 27,1 L5,1 Z M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z"
-              class="border_2yy"
-            ></path>
-            <path
-              class="logo_2gS"
-              d="M13.6383 25H16.9133V16.0044H19.3702L19.8561 13.1936H16.9133V11.1568C16.9133 10.5002 17.3379 9.8108 17.9447 9.8108H19.6171V7H17.5674V7.0126C14.3604 7.129 13.7014 8.9864 13.6443 10.9374H13.6383V13.1936H12V16.0044H13.6383V25Z"
-              style="color: #f4ece1; fill: #f4ece1"
-            ></path>
-          </svg></a>
-        <a href="instagram.com"
-          ><svg
-            width="30px"
-            class="si6900021290739d09dbd5077a5ceab08fcbb349b29f33c5b67aeaa4371761608217215 svgIcon_1J7 filled_Qbi darkTheme_3jZ"
-            viewBox="0 0 32 32"
-            style="border-radius: 4px"
-          >
-            <g>
-              <path
-                class="outer_bDW"
-                d="M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-              <path
-                class="insta-mask-hover_2Yt"
-                style="
-                  fill: url(#si6900021290739d09dbd5077a5ceab08fcbb349b29f33c5b67aeaa4371761608217215instagramhover);
-                "
-                d="M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-            </g>
-            <path
-              d="M5,1 C2.790861,1 1,2.790861 1,5 L1,27 C1,29.209139 2.790861,31 5,31 L27,31 C29.209139,31 31,29.209139 31,27 L31,5 C31,2.790861 29.209139,1 27,1 L5,1 Z M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z"
-              class="border_2yy"
-            ></path>
-            <g>
-              <path
-                class="logo_2gS"
-                style="fill: #f4ece1; color: #f4ece1"
-                d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-              <path
-                class="insta-mask-logo-hover_19f"
-                style="fill: #f4ece1; color: #f4ece1"
-                d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-            </g>
-          </svg></a>
-        <a href="youtube.com"
-          ><svg
-            width="30px"
-            class="si6900021290739d09dbd5077a5ceab08fcbb349b29f33c5b67aeaa4371761608217215 svgIcon_1J7 filled_Qbi darkTheme_3jZ"
-            viewBox="0 0 32 32"
-            style="border-radius: 4px"
-          >
-            <g>
-              <path
-                class="outer_bDW"
-                d="M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-              <path
-                class="insta-mask-hover_2Yt"
-                style="
-                  fill: url(#si6900021290739d09dbd5077a5ceab08fcbb349b29f33c5b67aeaa4371761608217215instagramhover);
-                "
-                d="M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-            </g>
-            <path
-              d="M5,1 C2.790861,1 1,2.790861 1,5 L1,27 C1,29.209139 2.790861,31 5,31 L27,31 C29.209139,31 31,29.209139 31,27 L31,5 C31,2.790861 29.209139,1 27,1 L5,1 Z M5,0 L27,0 C29.7614237,-5.07265313e-16 32,2.23857625 32,5 L32,27 C32,29.7614237 29.7614237,32 27,32 L5,32 C2.23857625,32 3.38176876e-16,29.7614237 0,27 L0,5 C-3.38176876e-16,2.23857625 2.23857625,5.07265313e-16 5,0 Z"
-              class="border_2yy"
-            ></path>
-            <g>
-              <path
-                class="logo_2gS"
-                style="fill: #f4ece1; color: #f4ece1"
-                d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-              <path
-                class="insta-mask-logo-hover_19f"
-                style="fill: #f4ece1; color: #f4ece1"
-                d="M12.7045454,8 C10.1221593,8 8,10.1193185 8,12.7045454 L8,19.2954545 C8,21.8778407 10.1193185,24 12.7045454,24 L19.2954545,24 C21.8778407,24 24,21.8806822 24,19.2954545 L24,12.7045454 C24,10.1221593 21.8806822,8 19.2954545,8 L12.7045454,8 Z M12.7045454,9.45454545 L19.2954545,9.45454545 C21.0937498,9.45454545 22.5454545,10.9062502 22.5454545,12.7045454 L22.5454545,19.2954545 C22.5454545,21.0937498 21.0937498,22.5454545 19.2954545,22.5454545 L12.7045454,22.5454545 C10.9062502,22.5454545 9.45454545,21.0937498 9.45454545,19.2954545 L9.45454545,12.7045454 C9.45454545,10.9062502 10.9062502,9.45454545 12.7045454,9.45454545 Z M20.2954545,11.0454545 C19.9289774,11.0454545 19.6363636,11.3380684 19.6363636,11.7045454 C19.6363636,12.0710225 19.9289774,12.3636364 20.2954545,12.3636364 C20.6619316,12.3636364 20.9545454,12.0710225 20.9545454,11.7045454 C20.9545454,11.3380684 20.6619316,11.0454545 20.2954545,11.0454545 Z M16,11.6363636 C13.599432,11.6363636 11.6363636,13.599432 11.6363636,16 C11.6363636,18.400568 13.599432,20.3636364 16,20.3636364 C18.400568,20.3636364 20.3636364,18.400568 20.3636364,16 C20.3636364,13.599432 18.400568,11.6363636 16,11.6363636 Z M16,13.0909091 C17.6164771,13.0909091 18.9090909,14.3835229 18.9090909,16 C18.9090909,17.6164771 17.6164771,18.9090909 16,18.9090909 C14.3835229,18.9090909 13.0909091,17.6164771 13.0909091,16 C13.0909091,14.3835229 14.3835229,13.0909091 16,13.0909091 Z"
-              ></path>
-            </g>
-          </svg>
-          </a>
+
+      <div class="footer__socials">
+        <a class="footer__social-link" href="#"
+          ><img src="img/svg/facebook-footer.svg" alt="Facebook"
+        /></a>
+        <a class="footer__social-link" href="#"
+          ><img src="img/svg/instagram-footer.svg" alt="Instagram"
+        /></a>
+        <a class="footer__social-link" href="#"
+          ><img src="img/svg/twitter-footer.svg" alt="Twitter"
+        /></a>
       </div>
     </footer>
     <script></script>
