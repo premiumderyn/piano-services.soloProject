@@ -18,58 +18,52 @@
         <h4 class="header__slogan">Let's Work Together!</h4>
         <a class="header__email" href="#">maestro.piano@email.com</a>
       </div>
-
-      <div class="header__nav-wrapper">
-        <img
-          class="header__logo"
-          src="img/main-logo.svg"
-          alt="Maestro Piano Logo"
-        />
-        <nav class="nav_header__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">About Us</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Services</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Testimonials</a>
-            </li>
-            <li class="nav__item"><a class="nav__link" href="#">Pricing</a></li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__cta-btn" href="#">Book Now →</a>
-      </div>
-
-      <div class="header__hero">
-        <div class="hero">
-          <h1 class="hero__title">
-            From <span class="hero__highlight">Keys</span> to Strings, We Fix
-            Everything
-          </h1>
+      <div class="header__main">
+        <div class="header__nav-wrapper">
+          <img
+            class="header__logo"
+            src="img/main-logo.svg"
+            alt="Maestro Piano Logo"
+          />
+          <nav class="nav_header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">About Us</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Services</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Testimonials</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Pricing</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__cta-btn" href="#">Book Now →</a>
         </div>
-        <div class="hero__socials">
-          <a class="hero__social-link" href="#">INSTAGRAM</a>
-          <a class="hero__social-link" href="#">FACEBOOK</a>
-          <a class="hero__social-link" href="#">YOUTUBE</a>
-          <a class="hero__social-link" href="#">TWITTER</a>
+
+        <div class="header__hero">
+          <div class="hero">
+            <h1 class="hero__title">
+              From <span class="hero__highlight">Keys</span> to Strings, We Fix
+              Everything
+            </h1>
+          </div>
+          <div class="hero__socials">
+            <a class="hero__social-link" href="#">INSTAGRAM</a>
+            <a class="hero__social-link" href="#">FACEBOOK</a>
+            <a class="hero__social-link" href="#">YOUTUBE</a>
+            <a class="hero__social-link" href="#">TWITTER</a>
+          </div>
         </div>
       </div>
-
-      <!-- <div >
-        <img
-          class="header__img"
-          src="img/header-background.png"
-          alt="The man restoring the piano by hands"
-        />
-      </div>
-    </header> -->
-    <section class="header__image"></section>
-
+      <section class="header__image"><div class="header__img"></div></section>
+    </header>
     <main>
       <section class="about">
         <div class="about__intro">
@@ -84,37 +78,65 @@
         </div>
 
         <div class="about__content">
-          <div class="about__image">
-            <img src="img/black-piano.png" alt="Black piano" />
+          <div class="about__content_top">
+            <div class="about__image">
+              <img
+                class="about__image_png"
+                src="img/black-piano.png"
+                alt="Black piano"
+              />
+            </div>
+            <div class="about__card about__card--welcome">
+              <p class="about__label">WELCOME HERE</p>
+              <h3 class="about__heading">Making Music Shine Again</h3>
+              <hr class="about__pargh_divider" />
+              <p class="about__desc">
+                With years of expertise in tuning, restoration, and repair, our
+                mission is to ensure your instrument sounds its best, whether
+                it's a family treasure or a performance-ready masterpiece.
+              </p>
+              <a class="about__link" href="#">More About →</a>
+            </div>
           </div>
-          <div class="about__card about__card--welcome">
-            <p class="about__label">WELCOME HERE</p>
-            <h3 class="about__heading">Making Music Shine Again</h3>
-            <p class="about__desc">
-              With years of expertise ... performance-ready masterpiece.
-            </p>
-            <a class="about__link" href="#">More About →</a>
-          </div>
-
-          <div class="about__quote">
-            <hr class="about__divider" />
-            <svg class="about__icon" ...></svg>
-            <p class="about__quote-text">
-              We are committed to serving the local community ...
-            </p>
-            <p class="about__since">SINCE 1990</p>
-            <hr class="about__divider" />
-          </div>
-
-          <div class="about__image">
-            <img src="img/piano-repairing.png" alt="Repairing piano" />
+          <div class="about__content_bottom">
+            <div class="about__quote">
+              <hr class="about__divider" />
+              <!--about hr styling https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements/hr -->
+              <svg
+                class="about__icon"
+                height="50px"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+              >
+                <path
+                  d="M23 14v15l-4.5 8H11l4.5-8H8V14h15zm19 0v15l-4.5 8H30l4.5-8H27V14h15z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  style=""
+                ></path>
+              </svg>
+              <p class="about__quote-text">
+                We are committed to serving the local community with
+                professional piano services of exceptional quality. There is no
+                piano brand or size difficult for us to handle.
+              </p>
+              <p class="about__since">SINCE 1990</p>
+              <hr class="about__divider" />
+            </div>
+            <div class="about__image">
+              <img class="about__image_png" src="img/piano-repairing.png" alt="Repairing piano" />
+            </div>
           </div>
         </div>
       </section>
       <section class="services">
         <p class="services__subtitle">~ SERVICES WE PROVIDE ~</p>
         <h2 class="services__title">Restoring the Soul of Your Piano</h2>
-        <p class="services__desc">Experience expert piano tuning ...</p>
+        <p class="services__desc">
+          Experience expert piano tuning, restoration, and repair designed to
+          bring out the best in your instrument.
+        </p>
 
         <div class="services__list">
           <div class="services__item">
@@ -203,7 +225,18 @@
             <span class="history__highlight">Deserves Expert</span> Care and
             Attention
           </h3>
-          <p class="history__text">Founded by a team ...</p>
+          <p class="history__text">
+            Founded by a team of skilled technicians and musicians.
+          </p>
+          <p>
+            With decades of combined experience, we specialize in tuning,
+            restoration, and moving services that bring life back to your
+            cherished instrument.
+          </p>
+          <p>
+            Whether it’s a family heirloom or a concert piano, we treat every
+            instrument with the care and precision it deserves.
+          </p>
           <a class="history__link" href="#">Learn More →</a>
         </div>
       </section>
