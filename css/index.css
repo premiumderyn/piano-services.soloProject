@@ -4,5 +4,7 @@
 @import 'index.services.partial.css';
 @import 'index.maestro-difference.partial.css';
 @import 'index.history.partial.css';
-@import 'discount.partial.css';
-@import 'sale-rent.partial.css';
+@import 'index.discount.partial.css';
+@import 'index.sale-rent.partial.css';
+@import 'index.benefits.partial.css';
+@import 'index.footer.partial.css';

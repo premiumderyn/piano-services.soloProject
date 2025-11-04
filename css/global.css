@@ -30,6 +30,7 @@ li {
   --border-color: rgb(49, 35, 19);
   --description-text: #E6C995;
   --text-header-img: #FFE4C4;
+  --footer-nav-text: #ECE2D5BA;
 }
 img {
   display: block;

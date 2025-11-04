@@ -1,0 +1,126 @@
+.sale-rent {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 150px;
+  background-color: var(--background-header-main);
+  .sale-rent__header {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .sale-rent__intro {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .sale-rent__subtitle {
+        font-size: 11px;
+        color: var(--top-text-color);
+        font-weight: 900;
+        font-family: var(--paragraph-font);
+        letter-spacing: 2px;
+      }
+      .sale-rent__title {
+        font-size: 42px;
+        font-family: var(--header-font);
+        color: var(--header-text-color);
+        font-weight: 400;
+        .sale-rent_title-hightligth {
+          color: var(--highlight-text);
+        }
+      }
+      .sale-rent__desc {
+        font-size: 19px;
+        font-family: var(--paragraph-font);
+        color: var(--paragraph-color);
+        font-weight: 700;
+      }
+    }
+    .sale-rent__contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      .sale-rent__image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .sale-rent__info {
+        display: flex;
+        flex-direction: column;
+        .sale-rent__motto {
+          font-size: 25px;
+          color: var(--header-text-color);
+          font-family: var(--header-font);
+        }
+        .sale-rent__phone {
+          font-size: 17px;
+          font-family: var(--paragraph-font);
+          color: var(--paragraph-color);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .sale-rent__offers {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-around;
+    .sale-rent__item {
+      background-color: var(--background-top-header-color);
+      padding: 20px 40px;
+      border-radius: 7px;
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .sale-rent__heading {
+        font-size: 25px;
+        color: var(--header-text-color);
+        font-weight: 400;
+        font-family: var(--header-font);
+      }
+      .sale-rent__divider {
+        border: 2.5px solid var(--highlight-text);
+        width: 40px;
+      }
+      .sale-rent__price {
+        font-size: 15px;
+        color: var(--paragraph-color);
+        font-family: var(--paragraph-font);
+        font-weight: 700;
+        .sale-rent__highlight {
+          color: var(--top-text-color);
+        }
+      }
+      .sale-rent__list {
+        .sale-rent__list-item {
+          font-size: 17px;
+          font-family: var(--paragraph-font);
+          color: var(--paragraph-color);
+          list-style-type: disc;
+          list-style-position: inside;
+        }
+        .sale-rent__list-item::marker {
+          color: var(--top-text-color);
+        }
+      }
+      .sale-rent__btn {
+        margin: 20px 0;
+        text-align: center;
+        color: var(--text-button);
+        text-decoration: none;
+        font-size: 14px;
+        font-family: var(--paragraph-font);
+        padding: 12px 15px;
+        border-radius: 6px;
+        font-weight: 700;
+        align-self: flex-start;
+        background-color: var(--button-book);
+      }
+    }
+  }
+}
