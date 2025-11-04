@@ -1,3 +1,8 @@
 @import 'global.css';
 @import 'index.header.partial.css';
-@import 'about.partial.css';
+@import 'index.about.partial.css';
+@import 'index.services.partial.css';
+@import 'index.maestro-difference.partial.css';
+@import 'index.history.partial.css';
+@import 'discount.partial.css';
+@import 'sale-rent.partial.css';

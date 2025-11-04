@@ -1,0 +1,107 @@
+.services {
+  text-align: center;
+  padding: 100px 150px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: var(--background-header-main);
+  .services__top {
+    margin-bottom: 50px;
+    .services__subtitle {
+      font-size: 11px;
+      color: var(--top-text-color);
+      font-weight: 900;
+      font-family: var(--paragraph-font);
+      letter-spacing: 2px;
+    }
+    .services__title {
+      margin: 20px 0;
+      font-size: 42px;
+      font-family: var(--header-font);
+      color: var(--header-text-color);
+      font-weight: 400;
+      .services__title_highlight {
+        color: var(--highlight-text);
+      }
+    }
+    .services__desc {
+      color: var(--paragraph-color);
+      font-size: 19px;
+      font-family: var(--paragraph-font);
+    }
+  }
+
+  .services__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .services__item {
+      background-color: var(--background-top-header-color);
+      display: flex;
+      flex-direction: column;
+      /* align-self: center; */
+      border-radius: 5%;
+      padding: 45px 30px;
+      /* justify-content: center; */
+
+      width: 31%;
+      /* height: 80%; */
+      .services__name {
+        font-size: 25px;
+        font-family: var(--header-font);
+        color: var(--header-text-color);
+        font-weight: 400;
+      }
+      .services__link {
+        font-size: 11px;
+        font-family: var(--paragraph-font);
+        color: var(--paragraph-color);
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        padding: 25px 0 15px 0;
+      }
+    }
+    .services__img {
+      width: 300px;
+      height: 193.31px;
+    }
+  }
+  .services__stats {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .services__stat {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      /* background-color: aqua; */
+      /* border: 1px solid red; */
+      .services__number {
+        font-size: 42px;
+        font-family: var(--header-font);
+        color: var(--highlight-text);
+        font-weight: 400;
+        .services__text_seprt {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+      .services__line {
+        margin: 10px 0;
+        border: 2.5px solid var(--top-text-color);
+        width: 40px;
+        overflow: visible;
+      }
+      .services__label{
+        font-size: 17px;
+        font-family: var(--paragraph-font);
+        color: var(--paragraph-color);
+      }
+    }
+  }
+}

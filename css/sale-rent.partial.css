@@ -1,0 +1,69 @@
+.sale-rent {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 150px;
+  background-color: var(--background-header-main);
+  .sale-rent__header {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: space-between;
+
+    /* width: 60%; */
+    .sale-rent__intro {
+      gap: 15px;
+      .sale-rent__subtitle {
+        font-size: 11px;
+        color: var(--top-text-color);
+        font-weight: 900;
+        font-family: var(--paragraph-font);
+        letter-spacing: 2px;
+      }
+      .sale-rent__title {
+        font-size: 42px;
+        font-family: var(--header-font);
+        color: var(--header-text-color);
+        font-weight: 400;
+        .sale-rent_title-hightligth {
+          color: var(--highlight-text);
+        }
+      }
+      .sale-rent__desc {
+        font-size: 19px;
+        font-family: var(--paragraph-font);
+        color: var(--paragraph-color);
+        font-weight: 700;
+      }
+    }
+    .sale-rent__contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      /* width: 30%; */
+      .sale-rent__image {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .sale-rent__info {
+        display: flex;
+        flex-direction: column;
+        .sale-rent__motto {
+          font-size: 25px;
+          color: var(--header-text-color);
+          font-family: var(--header-font);
+        }
+        .sale-rent__phone {
+          font-size: 17px;
+          font-family: var(--paragraph-font);
+          color: var(--paragraph-color);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
