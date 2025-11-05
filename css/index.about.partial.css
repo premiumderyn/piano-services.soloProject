@@ -1,11 +1,15 @@
 .about {
-  margin: 100px 150px;
+  margin: 50px 0px;
+  @media (min-width: 1280px) {
+    margin: 100px 150px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   .about__intro {
     text-align: center;
+    margin: 0 20px;
     .about__subtitle {
       font-size: 11px;
       color: var(--top-text-color);
@@ -15,10 +19,13 @@
     }
     .about__title {
       margin: 20px 0;
-      font-size: 42px;
+      font-size: 34px;
       font-family: var(--header-font);
       color: var(--header-text-color);
       font-weight: 400;
+      @media (min-width: 768px) {
+        font-size: 42px;
+      }
       .about__highlight {
         color: var(--highlight-text);
       }
@@ -34,12 +41,20 @@
       display: flex;
       /* align-items: center; */
       justify-content: space-around;
-      flex-direction: row;
+      flex-direction: column;
+      gap: 35px;
+      @media (min-width: 1000px) {
+        flex-direction: row;
+        gap: 0;
+      }
       flex: 1;
       margin: 50px;
       height: auto;
       .about__image {
-        width: 57%;
+        @media (min-width: 1000px) {
+          width: 57%;
+        }
+
         .about__image_png {
           border-radius: 5%;
         }
@@ -50,7 +65,10 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 35%;
+        @media (min-width: 1000px) {
+          width: 35%;
+        }
+
         background-color: var(--background-header-main);
         border-radius: 5%;
         .about__label {
@@ -102,7 +120,12 @@
       margin: 0 50px;
       /* align-items: center; */
       justify-content: space-around;
-      flex-direction: row;
+      flex-direction: column;
+      gap: 35px;
+      @media (min-width: 1000px) {
+        flex-direction: row;
+        gap: 0;
+      }
       height: auto;
       .about__quote {
         text-align: center;
@@ -110,7 +133,10 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        width: 35%;
+        @media (min-width: 1000px) {
+          width: 35%;
+        }
+
         background-color: var(--highlight-text);
         border-radius: 5%;
         .about__quote-text {
@@ -148,7 +174,9 @@
         } */
       }
       .about__image {
-        width: 57%;
+        @media (min-width: 1000px) {
+          width: 57%;
+        }
         .about__image_png {
           border-radius: 5%;
         }

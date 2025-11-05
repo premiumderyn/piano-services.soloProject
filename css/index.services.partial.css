@@ -1,13 +1,18 @@
 .services {
   text-align: center;
-  padding: 100px 150px;
+  padding: 50px 0px;
+  @media (min-width: 1000px) {
+    padding: 100px 150px;
+  }
+  
+  
   display: flex;
   /* align-items: center; */
   justify-content: space-around;
   flex-direction: column;
   background-color: var(--background-header-main);
   .services__top {
-    margin-bottom: 50px;
+    margin: 0 20px 50px 20px;
     .services__subtitle {
       font-size: 11px;
       color: var(--top-text-color);
@@ -17,7 +22,10 @@
     }
     .services__title {
       margin: 20px 0;
-      font-size: 42px;
+      font-size: 34px;
+      @media (min-width: 1000px) {
+        font-size: 42px;
+      }
       font-family: var(--header-font);
       color: var(--header-text-color);
       font-weight: 400;
@@ -34,25 +42,36 @@
 
   .services__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 0 20px;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
     align-items: center;
     justify-content: space-around;
     .services__item {
       background-color: var(--background-top-header-color);
       display: flex;
+      margin-bottom: 10px;
       flex-direction: column;
       /* align-self: center; */
       border-radius: 5%;
       padding: 45px 30px;
       /* justify-content: center; */
+      @media (min-width: 1000px) {
+        
+        width: 31%;
+      }
 
-      width: 31%;
       /* height: 80%; */
       .services__name {
-        font-size: 25px;
+        font-size: 22px;
         font-family: var(--header-font);
         color: var(--header-text-color);
         font-weight: 400;
+        @media (min-width: 768px) {
+          font-size: 25px;
+        }
       }
       .services__link {
         font-size: 11px;
@@ -64,21 +83,24 @@
       }
     }
     .services__img {
-      width: 300px;
-      height: 193.31px;
+      /* width: 300px;
+      height: 193.31px; */
     }
   }
   .services__stats {
     margin-top: 80px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
     align-items: center;
     justify-content: space-around;
     .services__stat {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       /* background-color: aqua; */
       /* border: 1px solid red; */
       .services__number {
@@ -97,7 +119,7 @@
         width: 40px;
         overflow: visible;
       }
-      .services__label{
+      .services__label {
         font-size: 17px;
         font-family: var(--paragraph-font);
         color: var(--paragraph-color);

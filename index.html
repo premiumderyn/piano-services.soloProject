@@ -13,11 +13,12 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
+      <!-- <div class="header__top">
         <a class="header__phone" href="#">+1 (234) 567 89 00</a>
         <h4 class="header__slogan">Let's Work Together!</h4>
         <a class="header__email" href="#">maestro.piano@email.com</a>
-      </div>
+      </div> -->
+
       <div class="header__main">
         <div class="header__nav-wrapper">
           <img
@@ -25,26 +26,49 @@
             src="img/svg/main-logo.svg"
             alt="Maestro Piano Logo"
           />
-          <nav class="nav_header__nav">
-            <ul class="nav__list">
+
+          <nav class="header__nav">
+            <!-- Кнопка бургер -->
+            <button
+              class="header__burger"
+              id="burger-btn"
+              aria-label="Open menu"
+            >
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+            </button>
+
+            <!-- Кнопка закриття -->
+            <button
+              class="header__close"
+              id="close-btn"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+
+            <!-- Меню -->
+            <ul class="nav__list" id="nav-list">
               <li class="nav__item">
-                <a class="nav__link" href="#">About Us</a>
+                <a class="nav__link" href="index.html">About Us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Services</a>
+                <a class="nav__link" href="index.html">Services</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Testimonials</a>
+                <a class="nav__link" href="index.html">Testimonials</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Pricing</a>
+                <a class="nav__link" href="index.html">Pricing</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Contacts</a>
+                <a class="nav__link" href="index.html">Contacts</a>
               </li>
             </ul>
           </nav>
-          <a class="header__cta-btn" href="#">Book Now →</a>
+
+          <!-- <a class="header__cta-btn" href="#">Book Now →</a> -->
         </div>
 
         <div class="header__hero">
@@ -101,7 +125,7 @@
           <div class="about__content_bottom">
             <div class="about__quote">
               <hr class="about__divider" />
-              <!--about hr styling https://developer.mozilla.org/ru/docs/Web/HTML/Reference/Elements/hr -->
+              
               <svg
                 class="about__icon"
                 height="50px"
@@ -156,15 +180,7 @@
               alt="Restoring piano"
             />
           </div>
-          <!-- <div class="services__item">
-            <h4 class="services__name">Piano Moving</h4>
-            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
-            <img
-              class="services__img"
-              src="img/piano-moving.png"
-              alt="Moving piano"
-            />
-          </div> -->
+         
           <div class="services__item">
             <h4 class="services__name">Piano Tuning</h4>
             <a class="services__link" href="#">MORE ABOUT SERVICE</a>
@@ -217,8 +233,7 @@
       <section class="difference">
         <p class="difference__subtitle">~ DISCOVER THE MAESTRO DIFFERENCE ~</p>
         <h2 class="difference__title">Take Care of Your Piano!</h2>
-        <h2 class="difference__title_under">
-          Order Only Professional Service!
+          <h2 class="difference__title">Order Only Professional Service!
         </h2>
         <p class="difference__desc">
           Trust Maestro Piano to keep your music alive.
@@ -269,7 +284,7 @@
           </div>
         </div>
       </section>
-      <section class="sale-rent">
+      <!-- <section class="sale-rent">
         <div class="sale-rent__header">
           <div class="sale-rent__intro">
             <p class="sale-rent__subtitle">~ SALE & RENT ~</p>
@@ -457,7 +472,7 @@
           ><img src="img/svg/twitter-footer.svg" alt="Twitter"
         /></a>
       </div>
-    </footer>
-    <script></script>
+    </footer> -->
+    <script src="js/burger.js"></script>
   </body>
 </html>
