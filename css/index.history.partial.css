@@ -36,7 +36,7 @@
     text-align: left;
     flex-direction: column;
     @media (min-width: 1400px) {
-      justify-content: space-around; */
+      justify-content: space-around; 
     }
     .history__subtitle {
       font-size: 11px;
