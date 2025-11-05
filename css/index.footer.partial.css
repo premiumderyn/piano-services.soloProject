@@ -10,7 +10,7 @@
   .footer__section {
     @media (min-width: 1200px) {
       height: 40vh;
-      padding: 40px auto;
+      margin: 40px auto;
       max-width: 1200px;
       align-items: center;
       display: flex;
