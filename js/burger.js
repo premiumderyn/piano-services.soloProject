@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.classList.toggle("header__burger--active");
     menu.classList.toggle("nav__list--active");
 
-    document.body.style.overflow = menu.classList.contains("nav__list--active")
-      ? "hidden"
-      : "";
+    const isMenuActive = menu.classList.contains("nav__list--active");
+
+    closeBtn.style.display = isMenuActive ? "block" : "none";
+
+    document.body.style.overflow = isMenuActive ? "hidden" : "";
   };
 
   burger.addEventListener("click", toggleMenu);

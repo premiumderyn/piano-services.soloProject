@@ -56,9 +56,6 @@
       align-items: center;
       justify-content: center;
       margin: 20px;
-      /* @media (min-width: 1200px) {
-        flex-direction: row;
-      } */
       flex-direction: row;
       .sale-rent__image {
         width: 70px;

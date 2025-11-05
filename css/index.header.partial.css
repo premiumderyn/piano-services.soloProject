@@ -3,7 +3,7 @@
   .header__top {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     padding: 10px 40px;
     .header__top {
@@ -90,48 +90,27 @@
         z-index: 2001;
       }
 
-      /* показуємо хрестик, коли меню активне */
-      .nav__list--active ~ .header__close {
-        display: block;
-      }
+      
 
-      /* Fullscreen меню */
       .nav__list {
         display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        position: fixed; /* обов'язково — фіксує меню поверх усіх елементів */
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100vw; /* повна ширина екрана */
-        height: 100vh; /* повна висота екрана */
+        width: 100vw;
+        height: 100vh;
         background-color: var(--background-header-main);
 
         gap: 2rem;
         transition: all 0.4s ease;
         opacity: 0;
         transform: translateY(-10px);
-        z-index: 2000; /* ставимо вище за інші елементи */
+        z-index: 2000;
       }
-      /* .header__top {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--background-header-main);
-        gap: 2rem;
-        transition: all 0.4s ease;
-        opacity: 0;
-        transform: translateY(-10px);
-        z-index: 1000;
-      } */
       .nav__list--active {
         display: flex;
         opacity: 1;
@@ -150,14 +129,7 @@
         z-index: 3000; /* ще вище */
       }
 
-      .nav__list--active + .header__close {
-        display: block;
-      }
-      /* .header__top--active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-      } */
+      
       .nav__link {
         font-size: 1.5rem;
         color: var(--paragraph-color);
@@ -188,29 +160,6 @@
           transform: none;
           padding-top: 20px;
         }
-        /* .header__top {
-          display: flex;
-          position: static;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          height: auto;
-          background: none;
-          opacity: 1;
-          transform: none;
-        } */
-
-        /* .header__cta-btn {
-          text-align: center;
-          color: var(--text-button);
-          text-decoration: none;
-          font-size: 14px;
-          font-family: var(--paragraph-font);
-          padding: 14px 30px;
-          border-radius: 6px;
-          font-weight: 700;
-          background-color: var(--button-book);
-        } */
       }
     }
 
@@ -230,7 +179,7 @@
         text-align: center;
         /* height: 168px; */
         font-family: var(--header-font);
-        margin: 30px;
+        margin: 15px;
         font-weight: 400;
         .hero__highlight {
           color: var(--highlight-text);
@@ -240,6 +189,7 @@
         }
         @media (min-width: 768px) {
           font-size: 63px;
+          margin: 0;
         }
         @media (min-width: 1000) {
           font-size: 70px;
@@ -253,6 +203,7 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
+        
         @media (min-width: 480px) {
           flex-direction: row;
         }
@@ -262,6 +213,8 @@
           font-size: 11px;
           font-family: var(--paragraph-font);
           font-weight: 900;
+          display: flex;
+          margin: 3px 0;
         }
       }
     }
@@ -269,11 +222,16 @@
 
   .header__img {
     height: 30vh;
-    @media(min-width: 768px) {
+    @media (min-width: 768px) {
       height: 45vh;
     }
     overflow: hidden;
-    /* width: 100%; */
-    background: url("../img/header-background.png") no-repeat center/cover;
+
+    background: url("../img/header-background.png");
+    /* no-repeat center/cover */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
