@@ -1,18 +1,33 @@
 .sale-rent {
   display: flex;
   flex-direction: column;
-  padding: 100px 150px;
+
   background-color: var(--background-header-main);
+
   .sale-rent__header {
     display: flex;
+    padding-top: 50px;
+    @media (min-width: 1200px) {
+      margin: 100px auto;
+      max-width: 1200px;
+    }
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
     .sale-rent__intro {
       display: flex;
       flex-direction: column;
+      align-items: left;
+      text-align: left; 
       gap: 15px;
+      margin: 20px;
       .sale-rent__subtitle {
         font-size: 11px;
         color: var(--top-text-color);
@@ -40,6 +55,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 20px;
+      /* @media (min-width: 1200px) {
+        flex-direction: row;
+      } */
       flex-direction: row;
       .sale-rent__image {
         width: 70px;
@@ -65,9 +84,22 @@
     }
   }
   .sale-rent__offers {
+    /* margin-bottom: 100px; */
+    @media (min-width: 1200px) {
+      margin: 100px auto;
+      max-width: 1200px;
+    }
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
+    flex-direction: column;
+    margin: 0 25px;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+      margin: 0 0;
+      gap: 30px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    margin-bottom: 150px;
     justify-content: space-around;
     .sale-rent__item {
       background-color: var(--background-top-header-color);
@@ -77,6 +109,10 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      @media (min-width: 1000px) {
+        flex: 1;
+        margin: 0;
+      }
       .sale-rent__heading {
         font-size: 25px;
         color: var(--header-text-color);
@@ -120,6 +156,9 @@
         font-weight: 700;
         align-self: flex-start;
         background-color: var(--button-book);
+        @media (min-width: 1000px) {
+          margin-top: auto;
+        }
       }
     }
   }
