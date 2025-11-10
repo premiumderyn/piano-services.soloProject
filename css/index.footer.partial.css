@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  height: 53vh;
+  height: 55%;
   padding: 30px 20px;
   background-color: var(--header-text-color);
   justify-content: center;
