@@ -1,22 +1,21 @@
-/* --- Секція форми зв'язку --- */
 .contact-section {
   padding: 60px 20px;
 }
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Відстань між полями */
-  max-width: 500px; /* Обмежуємо ширину, щоб форма не розтягувалася на весь екран */
-  margin: 40px auto; /* Центруємо по горизонталі та додаємо відступи зверху/знизу */
+  gap: 20px;
+  max-width: 500px;
+  margin: 40px auto;
   font-family: inherit;
 }
 
 #contact-form label {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Відстань між текстом "Your email:" та самим інпутом */
+  gap: 8px;
   font-size: 16px;
-  color: #333; /* Темно-сірий/коричневий колір тексту */
+  color: #333;
   font-weight: 500;
 }
 
@@ -24,28 +23,26 @@
 #contact-form textarea {
   padding: 14px 16px;
   font-size: 16px;
-  border: 1px solid #ccc; /* Легка рамка */
-  border-radius: 4px; /* Злегка закруглені кути */
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: #fbfbfb;
   outline: none;
   font-family: inherit;
   transition: border-color 0.3s ease;
 }
 
-/* Робимо поле для повідомлення більшим */
 #contact-form textarea {
   min-height: 120px;
-  resize: vertical; /* Дозволяємо користувачу змінювати розмір лише по вертикалі */
+  resize: vertical;
 }
 
-/* Колір рамки при кліку (фокусі) - під колір твоїх кнопок */
 #contact-form input:focus,
 #contact-form textarea:focus {
-  border-color: #6d7f5c; /* Оливковий відтінок, схожий на твій дизайн */
+  border-color: #6d7f5c;
 }
 
 #contact-form button {
-  background-color: #6d7f5c; /* Оливковий колір кнопки */
+  background-color: #6d7f5c;
   color: #fff;
   padding: 16px 24px;
   font-size: 16px;
@@ -55,17 +52,51 @@
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease;
   margin-top: 10px;
 }
 
 #contact-form button:hover {
-  background-color: #556646; /* Трохи темніший колір при наведенні */
+  background-color: #556646;
 }
 
-/* Стиль для повідомлення про помилку */
 #error {
   text-align: center;
   font-weight: bold;
   margin-top: 15px;
+}
+
+.contact {
+  padding: 80px 20px 60px;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact__subtitle {
+  font-size: 14px;
+  color: #8b8b8b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.contact__title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: serif;
+}
+
+.contact__highlight {
+  color: #6d7f5c;
+}
+
+.contact__desc {
+  font-size: 16px;
+  color: #555;
 }
