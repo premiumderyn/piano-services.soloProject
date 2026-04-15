@@ -1,0 +1,29 @@
+{
+  "name": "piano-github",
+  "version": "1.0.0",
+  "description": "The promotional landing page for piano tuning, repair, and restoration services. This project demonstrates modern **HTML5** and **CSS3** techniques, focusing on semantic structure and responsive web design.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premiumderyn/piano-services.soloProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/premiumderyn/piano-services.soloProject/issues"
+  },
+  "homepage": "https://github.com/premiumderyn/piano-services.soloProject#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
