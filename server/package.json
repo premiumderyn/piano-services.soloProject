@@ -2,7 +2,7 @@
   "name": "piano-github",
   "version": "1.0.0",
   "description": "The promotional landing page for piano tuning, repair, and restoration services. This project demonstrates modern **HTML5** and **CSS3** techniques, focusing on semantic structure and responsive web design.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"

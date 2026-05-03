@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano service</title>
+    <link
+      rel="shortcut icon"
+      href="img/shortcut-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__main">
+        <div class="header__nav-wrapper">
+          <img
+            class="header__logo"
+            src="img/svg/main-logo.svg"
+            alt="Maestro Piano Logo"
+          />
+
+          <nav class="header__nav">
+            <button
+              class="header__burger"
+              id="burger-btn"
+              aria-label="Open menu"
+            >
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+            </button>
+
+            <ul class="nav__list" id="nav-list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about__section">About Us</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#services__section">Services</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#history__section">History</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#sale-rent__section">Pricing</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#why__section">Benefits</a>
+              </li>
+            </ul>
+            <button
+              class="header__close"
+              id="close-btn"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+          </nav>
+        </div>
+
+        <div class="header__hero">
+          <div class="hero">
+            <h1 class="hero__title">
+              From <span class="hero__highlight">Keys</span> to Strings, We Fix
+              Everything
+            </h1>
+          </div>
+          <div class="hero__socials">
+            <a class="hero__social-link" href="https://www.instagram.com"
+              >INSTAGRAM</a
+            >
+            <a class="hero__social-link" href="https://www.facebook.com"
+              >FACEBOOK</a
+            >
+            <a class="hero__social-link" href="https://www.youtube.com"
+              >YOUTUBE</a
+            >
+            <a class="hero__social-link" href="https://www.twitter.com"
+              >TWITTER</a
+            >
+          </div>
+        </div>
+      </div>
+      <section class="header__image"><div class="header__img"></div></section>
+    </header>
+    <main>
+      <section class="about" id="about__section">
+        <div class="about__intro">
+          <p class="about__subtitle">~ ABOUT US ~</p>
+          <h2 class="about__title">
+            Transforming <span class="about__highlight">Keys</span> into
+            Masterpieces
+          </h2>
+          <h4 class="about__text">
+            We are passionate about preserving the soul of every piano.
+          </h4>
+        </div>
+
+        <div class="about__content">
+          <div class="about__content_top">
+            <div class="about__image">
+              <img
+                class="about__image_png"
+                src="img/black-piano.png"
+                alt="Black piano"
+              />
+            </div>
+            <div class="about__card about__card--welcome">
+              <p class="about__label">WELCOME HERE</p>
+              <h3 class="about__heading">Making Music Shine Again</h3>
+              <hr class="about__pargh_divider" />
+              <p class="about__desc">
+                With years of expertise in tuning, restoration, and repair, our
+                mission is to ensure your instrument sounds its best, whether
+                it's a family treasure or a performance-ready masterpiece.
+              </p>
+              <a class="about__link" href="#">More About →</a>
+            </div>
+          </div>
+          <div class="about__content_bottom">
+            <div class="about__quote">
+              <hr class="about__divider" />
+
+              <svg
+                class="about__icon"
+                height="50px"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+              >
+                <path
+                  d="M23 14v15l-4.5 8H11l4.5-8H8V14h15zm19 0v15l-4.5 8H30l4.5-8H27V14h15z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  style=""
+                ></path>
+              </svg>
+              <p class="about__quote-text">
+                We are committed to serving the local community with
+                professional piano services of exceptional quality. There is no
+                piano brand or size difficult for us to handle.
+              </p>
+              <p class="about__since">SINCE 1990</p>
+              <hr class="about__divider" />
+            </div>
+            <div class="about__image">
+              <img
+                class="about__image_png"
+                src="img/piano-repairing.png"
+                alt="Repairing piano"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services" id="services__section">
+        <div class="services__top">
+          <p class="services__subtitle">~ SERVICES WE PROVIDE ~</p>
+          <h2 class="services__title">
+            Restoring the
+            <span class="services__title_highlight">Soul of Your </span>Piano
+          </h2>
+          <p class="services__desc">
+            Experience expert piano tuning, restoration, and repair designed to
+            bring out the best in your instrument.
+          </p>
+        </div>
+        <div class="services__list">
+          <div class="services__item">
+            <h4 class="services__name">Piano Restoration</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
+            <img
+              class="services__img"
+              src="img/piano-restoration.png"
+              alt="Restoring piano"
+            />
+          </div>
+
+          <div class="services__item">
+            <h4 class="services__name">Piano Tuning</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
+            <img
+              class="services__img"
+              src="img/piano-tuning.png"
+              alt="Tuning piano"
+            />
+          </div>
+          <div class="services__item">
+            <h4 class="services__name">Piano Repair</h4>
+            <a class="services__link" href="#">MORE ABOUT SERVICE</a>
+            <img
+              class="services__img"
+              src="img/piano-repair.png"
+              alt="Repairing piano"
+            />
+          </div>
+        </div>
+
+        <div class="services__stats">
+          <div class="services__stat">
+            <p class="services__number">
+              900<span class="services__text_seprt">+</span>
+            </p>
+            <hr class="services__line" />
+            <p class="services__label">Pianos Tuned</p>
+          </div>
+          <div class="services__stat">
+            <p class="services__number">1.2K</p>
+            <hr class="services__line" />
+            <p class="services__label">Happy Clients</p>
+          </div>
+          <div class="services__stat">
+            <p class="services__number">
+              200<span class="services__text_seprt">+</span>
+            </p>
+            <hr class="services__line" />
+            <p class="services__label">Restorations Completed</p>
+          </div>
+          <div class="services__stat">
+            <p class="services__number">
+              97<span class="services__text_seprt">%</span>
+            </p>
+            <hr class="services__line" />
+            <p class="services__label">Customer Satisfaction</p>
+          </div>
+        </div>
+      </section>
+      <section class="difference" id="difference__section">
+        <p class="difference__subtitle">~ DISCOVER THE MAESTRO DIFFERENCE ~</p>
+        <h2 class="difference__title">Take Care of Your Piano!</h2>
+        <h2 class="difference__title">Order Only Professional Service!</h2>
+        <p class="difference__desc">
+          Trust Maestro Piano to keep your music alive.
+        </p>
+        <div class="difference__buttons">
+          <a class="difference__btn" href="#contact__section">Contact Us</a>
+          <a class="difference__btn_opacity" href="#">Our Video</a>
+        </div>
+      </section>
+      <section class="history" id="history__section">
+        <img
+          class="history__img"
+          src="img/services-collage.png"
+          alt="Piano collage"
+        />
+        <div class="history__content">
+          <p class="history__subtitle">~ HISTORY ~</p>
+          <h3 class="history__title">
+            We Truly Believe Every Piano
+            <span class="history__highlight">Deserves Expert</span> Care and
+            Attention
+          </h3>
+          <p class="history__text">
+            Founded by a team of skilled technicians and musicians.
+          </p>
+          <p class="history__desc">
+            With decades of combined experience, we specialize in tuning,
+            restoration, and moving services that bring life back to your
+            cherished instrument.
+          </p>
+          <p class="history__desc">
+            Whether it’s a family heirloom or a concert piano, we treat every
+            instrument with the care and precision it deserves.
+          </p>
+          <a class="history__link" href="#">Learn More →</a>
+        </div>
+      </section>
+      <section class="discount" id="discount__section">
+        <div class="discount__block">
+          <p class="discount__subtitle">~ GET YOUR DISCOUNT ~</p>
+          <h3 class="discount__title">Restore the Perfect Sound</h3>
+          <p class="discount__desc">
+            Take advantage of a special 10% discount on your first service.
+          </p>
+          <div class="discount__buttons">
+            <a class="discount__btn" href="#contact__section">Contact Us</a>
+            <a class="discount__btn_opacity" href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <section class="sale-rent" id="sale-rent__section">
+        <div class="sale-rent__header">
+          <div class="sale-rent__intro">
+            <p class="sale-rent__subtitle">~ SALE & RENT ~</p>
+            <h3 class="sale-rent__title">
+              Perfect
+              <span class="sale-rent_title-hightligth">Pianos for Every </span>
+              Need
+            </h3>
+            <p class="sale-rent__desc">
+              Experience unmatched care and expertise for your instrument.
+            </p>
+          </div>
+
+          <div class="sale-rent__contact">
+            <img
+              class="sale-rent__image"
+              src="img/woman-on-the-phone.png"
+              alt="Woman on phone"
+            />
+            <div class="sale-rent__info">
+              <p class="sale-rent__motto">Play More, Stress Less</p>
+              <p class="sale-rent__phone">Call us: +1 (234) 567 89 00</p>
+            </div>
+          </div>
+        </div>
+        <div class="sale-rent__offers">
+          <div class="sale-rent__item">
+            <h3 class="sale-rent__heading">Grand Pianos</h3>
+            <hr class="sale-rent__divider" />
+            <p class="sale-rent__price">
+              Sale: Starting at
+              <span class="sale-rent__highlight">$8,000</span> <br />
+              Rent: From <span class="sale-rent__highlight">$300/month </span>
+            </p>
+            <ul class="sale-rent__list">
+              <li class="sale-rent__list-item">Rich, full sound;</li>
+              <li class="sale-rent__list-item">
+                Available in various finishes;
+              </li>
+              <li class="sale-rent__list-item">
+                Includes delivery and tuning.
+              </li>
+            </ul>
+            <a class="sale-rent__btn" href="#">Learn More</a>
+          </div>
+          <div class="sale-rent__item">
+            <h3 class="sale-rent__heading">Upright Pianos</h3>
+            <hr class="sale-rent__divider" />
+            <p class="sale-rent__price">
+              Sale: Starting at
+              <span class="sale-rent__highlight"> $2,500 </span>
+              <br />
+              Rent: From <span class="sale-rent__highlight">$100/month </span>
+            </p>
+            <ul class="sale-rent__list">
+              <li class="sale-rent__list-item">
+                Durable and space-saving design;
+              </li>
+              <li class="sale-rent__list-item">
+                Wide range of brands and styles;
+              </li>
+              <li class="sale-rent__list-item">Maintance package included.</li>
+            </ul>
+            <button class="sale-rent__btn" id="btn-back-send">Learn More</button>
+          </div>
+          <div class="sale-rent__item">
+            <h3 class="sale-rent__heading">Digital Pianos</h3>
+            <hr class="sale-rent__divider" />
+            <p class="sale-rent__price">
+              Sale: Starting at
+              <span class="sale-rent__highlight"> $1,200 </span>
+              <br />
+              Rent: From <span class="sale-rent__highlight">$50/month</span>
+            </p>
+            <ul class="sale-rent__list">
+              <li class="sale-rent__list-item">
+                Built-in speakers and headphone;
+              </li>
+              <li class="sale-rent__list-item">Multiple sound settings;</li>
+              <li class="sale-rent__list-item">
+                Lightweight and easy to move.
+              </li>
+            </ul>
+            <a class="sale-rent__btn" href="#">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <section class="why" id="why__section">
+        <p class="why__subtitle">~ WHY CHOOSE US ~</p>
+        <h2 class="why__title">
+          Your Journey to
+          <span class="why__highlight">Owning a Piano</span> Starts Here
+        </h2>
+        <p class="why__desc">
+          Discover the unique benefits of working with us.
+        </p>
+
+        <div class="why__list">
+          <div class="why__item">
+            <div class="why__image">
+              <img
+                class="why__icon"
+                src="img/svg/repair-tools.svg"
+                alt="Tools"
+              />
+            </div>
+            <div class="why__content">
+              <h4 class="why__heading">Expertise</h4>
+              <p class="why__text">
+                Skilled technicians ensuring perfect repairs.
+              </p>
+            </div>
+          </div>
+          <div class="why__item">
+            <div class="why__image">
+              <img
+                class="why__icon"
+                src="img/svg/music-notes.svg"
+                alt="Music notes"
+              />
+            </div>
+            <div class="why__content">
+              <h4 class="why__heading">Precision</h4>
+              <p class="why__text">Exact tuning and restoration.</p>
+            </div>
+          </div>
+          <div class="why__item">
+            <div class="why__image">
+              <img
+                class="why__icon"
+                src="img/svg/instrument-piano.svg"
+                alt="Music instrument- piano"
+              />
+            </div>
+            <div class="why__content">
+              <h4 class="why__heading">Reliability</h4>
+              <p class="why__text">Trustworthy service you can count on.</p>
+            </div>
+          </div>
+          <div class="why__item">
+            <div class="why__image">
+              <img
+                class="why__icon"
+                src="img/svg/hands-money.svg"
+                alt="Hands with money"
+              />
+            </div>
+            <div class="why__content">
+              <h4 class="why__heading">Affordability</h4>
+              <p class="why__text">Quality repairs at competitive prices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact__section">
+        <div class="contact__header">
+          <h2 class="contact__title">
+            Ready to <span class="contact__highlight">Restore</span> Your Piano?
+          </h2>
+          <p class="contact__desc">
+            Leave your email and a message, and we will get back to you shortly.
+          </p>
+        </div>
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/maqpqwnd"
+          method="POST"
+        >
+          <label>
+            Your email:
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@mail.com"
+              required
+            />
+          </label>
+
+          <label>
+            Your message:
+            <textarea
+              name="message"
+              id="message"
+              placeholder="How can we help you?"
+              required
+            ></textarea>
+          </label>
+
+          <button type="submit" >Send</button>
+        </form>
+
+        <p id="error" style="color: red"></p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__section">
+        <div class="footer__top">
+          <a class="footer__phone" href="#">+1 (234) 567 89 00</a>
+          <img class="footer__logo" src="img/svg/logo-footer.svg" alt="Logo" />
+          <a class="footer__email" href="#">maestro.piano@email.com</a>
+        </div>
+
+        <p class="footer__desc">
+          Expert piano care, tuning, restoration services dedicated to keeping
+          your music alive.
+        </p>
+
+        <div class="footer__menu">
+          <a class="footer__link" href="#about__section">About us</a>
+          <a class="footer__link" href="#services__section">Services</a>
+          <a class="footer__link" href="#history__section">History</a>
+          <a class="footer__link" href="#discount__section">Discount</a>
+          <a class="footer__link" href="#sale-rent__section">Price</a>
+          <a class="footer__link" href="#why__section">Benefits</a>
+        </div>
+
+        <div class="footer__socials">
+          <a class="footer__social-link" href="https://www.facebook.com"
+            ><img src="img/svg/facebook-footer.svg" alt="Facebook"
+          /></a>
+          <a class="footer__social-link" href="https://www.instagram.com"
+            ><img src="img/svg/instagram-footer.svg" alt="Instagram"
+          /></a>
+          <a class="footer__social-link" href="https://www.twitter.com"
+            ><img src="img/svg/twitter-footer.svg" alt="Twitter"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

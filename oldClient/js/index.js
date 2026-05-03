@@ -1,5 +1,6 @@
 import { validateForm } from "./validation.js";
 import { initBurgerMenu } from './burger.js';
+import { func } from './btnTest.js';
 
 const form = document.querySelector("form");
 const email = document.getElementById("email");
@@ -16,4 +17,5 @@ form.addEventListener("submit", function (e) {
 
 document.addEventListener("DOMContentLoaded", () => {
     initBurgerMenu();
+    func();
 });
