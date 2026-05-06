@@ -4,126 +4,178 @@
   @media (min-width: 1000px) {
     padding: 100px 150px;
   }
-  
-  
+
   display: flex;
-  /* align-items: center; */
   justify-content: space-around;
   flex-direction: column;
   background-color: var(--background-header-main);
-  .services__top {
-    margin: 0 20px 50px 20px;
-    .services__subtitle {
-      font-size: 11px;
-      color: var(--top-text-color);
-      font-weight: 900;
-      font-family: var(--paragraph-font);
-      letter-spacing: 2px;
-    }
-    .services__title {
-      margin: 20px 0;
-      font-size: 34px;
-      @media (min-width: 1000px) {
-        font-size: 42px;
-      }
-      font-family: var(--header-font);
-      color: var(--header-text-color);
-      font-weight: 400;
-      .services__title_highlight {
-        color: var(--highlight-text);
-      }
-    }
-    .services__desc {
-      color: var(--paragraph-color);
-      font-size: 19px;
-      font-family: var(--paragraph-font);
-    }
-  }
+}
 
-  .services__list {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    @media (min-width: 1000px) {
-      flex-direction: row;
-    }
-    align-items: center;
-    justify-content: space-around;
-    .services__item {
-      background-color: var(--background-top-header-color);
-      display: flex;
-      margin-bottom: 10px;
-      flex-direction: column;
-      /* align-self: center; */
-      border-radius: 5%;
-      padding: 45px 30px;
-      /* justify-content: center; */
-      @media (min-width: 1000px) {
-        
-        width: 31%;
-      }
+.services__top {
+  margin: 0 20px 50px 20px;
+}
 
-      /* height: 80%; */
-      .services__name {
-        font-size: 22px;
-        font-family: var(--header-font);
-        color: var(--header-text-color);
-        font-weight: 400;
-        @media (min-width: 768px) {
-          font-size: 25px;
-        }
-      }
-      .services__link {
-        font-size: 11px;
-        font-family: var(--paragraph-font);
-        color: var(--paragraph-color);
-        font-weight: 800;
-        letter-spacing: 1.5px;
-        padding: 25px 0 15px 0;
-      }
-    }
-    .services__img {
-      /* width: 300px;
-      height: 193.31px; */
-    }
+.services__subtitle {
+  font-size: 11px;
+  color: var(--top-text-color);
+  font-weight: 900;
+  font-family: var(--paragraph-font);
+  letter-spacing: 2px;
+}
+
+.services__title {
+  margin: 20px 0;
+  font-size: 34px;
+  @media (min-width: 1000px) {
+    font-size: 42px;
   }
-  .services__stats {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 1000px) {
-      flex-direction: row;
-    }
-    align-items: center;
-    justify-content: space-around;
-    .services__stat {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      /* background-color: aqua; */
-      /* border: 1px solid red; */
-      .services__number {
-        font-size: 42px;
-        font-family: var(--header-font);
-        color: var(--highlight-text);
-        font-weight: 400;
-        .services__text_seprt {
-          font-size: 14px;
-          font-weight: 700;
-        }
-      }
-      .services__line {
-        margin: 10px 0;
-        border: 2.5px solid var(--top-text-color);
-        width: 40px;
-        overflow: visible;
-      }
-      .services__label {
-        font-size: 17px;
-        font-family: var(--paragraph-font);
-        color: var(--paragraph-color);
-      }
-    }
+  font-family: var(--header-font);
+  color: var(--header-text-color);
+  font-weight: 400;
+}
+
+.services__title_highlight {
+  color: var(--highlight-text);
+}
+
+.services__desc {
+  color: var(--paragraph-color);
+  font-size: 19px;
+  font-family: var(--paragraph-font);
+}
+
+/* ── Картка ── */
+
+.services__item {
+  box-sizing: border-box;
+  background-color: var(--background-top-header-color);
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 5%;
+  padding: 45px 30px;
+}
+
+.services__name {
+  font-size: 22px;
+  font-family: var(--header-font);
+  color: var(--header-text-color);
+  font-weight: 400;
+  @media (min-width: 768px) {
+    font-size: 25px;
   }
+}
+
+.services__link {
+  font-size: 11px;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 25px 0 15px 0;
+}
+
+/* винесено з-під .services__list — тепер працює і в каруселі */
+.services__img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 5px;
+}
+
+/* ── Статистика ── */
+
+.services__stats {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+  align-items: center;
+  justify-content: space-around;
+}
+
+.services__stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services__number {
+  font-size: 42px;
+  font-family: var(--header-font);
+  color: var(--highlight-text);
+  font-weight: 400;
+}
+
+.services__text_seprt {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.services__line {
+  margin: 10px 0;
+  border: 2.5px solid var(--top-text-color);
+  width: 40px;
+  overflow: visible;
+}
+
+.services__label {
+  font-size: 17px;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+}
+
+/* ── Карусель ── */
+
+.services__carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.services__carousel_overflow {
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+}
+
+.services__carousel_track {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.services__carousel_btn {
+  position: absolute;
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  line-height: 1;
+  padding: 0;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.services__carousel_btn:hover {
+  opacity: 0.6;
+}
+
+.services__carousel_btn_prev {
+  left: -44px;
+}
+
+.services__carousel_btn_next {
+  right: -44px;
 }

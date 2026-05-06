@@ -12,7 +12,7 @@ import { SaleRent } from './components/SaleRent/SaleRent.tsx'
 import { WhyChoose } from './components/WhyChoose/WhyChoose.tsx'
 import { Contact } from './components/Contact/Contact.tsx'
 import { Footer } from './components/Footer/Footer.tsx'
-
+import { ReviewsCarousel } from './components/ReviewsCarousel/ReviewsCarousel.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -24,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
     <Discount />
     <SaleRent />
     <WhyChoose />
+    <ReviewsCarousel />
     <Contact />
     <Footer />
   </StrictMode>,
