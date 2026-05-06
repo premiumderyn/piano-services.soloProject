@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import styles from './PianoServices.module.css';
 
-// ─── Типи ───────────────────────────────────────────────────────────────────
 
 interface Service {
   name: string;
@@ -10,7 +9,7 @@ interface Service {
   alt: string;
 }
 
-// ─── Дані ───────────────────────────────────────────────────────────────────
+
 
 const SERVICES: Service[] = [
   { name: 'Piano Restoration', href: '#', img: '/img/piano-restoration.png', alt: 'Restoring piano' },
@@ -22,7 +21,7 @@ const SERVICES: Service[] = [
 const VISIBLE = 3;
 const GAP     = 12; // px, має збігатись з gap у CSS
 
-// ─── Компонент ──────────────────────────────────────────────────────────────
+
 
 export function PianoServices() {
   const trackRef = useRef<HTMLDivElement>(null);

@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import styles from './ReviewsCarousel.module.css';
 
-// ─── Типи ───────────────────────────────────────────────────────────────────
+
 
 interface Review {
   name: string;
@@ -18,7 +18,7 @@ interface ReviewsCarouselProps {
   gap?: number;
 }
 
-// ─── Дані за замовчуванням ──────────────────────────────────────────────────
+
 
 const DEFAULT_REVIEWS: Review[] = [
   {
@@ -51,7 +51,7 @@ const DEFAULT_REVIEWS: Review[] = [
   },
 ];
 
-// ─── Компонент ──────────────────────────────────────────────────────────────
+
 
 export function ReviewsCarousel({
   reviews = DEFAULT_REVIEWS,
