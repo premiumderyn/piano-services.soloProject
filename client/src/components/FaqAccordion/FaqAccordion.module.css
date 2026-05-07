@@ -1,0 +1,115 @@
+.section {
+  padding: 80px 20px;
+  background-color: var(--background-header-main);
+  box-sizing: border-box;
+}
+
+/* ── Заголовок ── */
+
+.header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--top-text-color);
+  font-family: var(--paragraph-font);
+  font-weight: 900;
+  margin: 0 0 16px;
+}
+
+.title {
+  font-family: var(--header-font);
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--header-text-color);
+  margin: 0;
+
+  @media (min-width: 1000px) {
+    font-size: 42px;
+  }
+}
+
+.titleHighlight {
+  color: var(--highlight-text);
+  font-style: italic;
+}
+
+/* ── Список ── */
+
+.list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Один елемент ── */
+
+.item {
+  border: 1.5px solid #e0d8cc;
+  border-radius: 8px;
+  background-color: var(--background-top-header-color, #fff);
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+
+.itemOpen {
+  border-color: var(--top-text-color);
+}
+
+/* ── Кнопка-питання ── */
+
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--header-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--header-text-color);
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.question:hover {
+  color: var(--highlight-text);
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--top-text-color);
+  line-height: 1;
+  transition: transform 0.3s;
+}
+
+/* ── Відповідь ── */
+
+.answerWrap {
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answer {
+  padding: 0 24px 20px;
+  margin: 0;
+  font-family: var(--paragraph-font);
+  font-size: 16px;
+  color: var(--paragraph-color);
+  line-height: 1.7;
+  border-top: 1px solid #e0d8cc;
+  padding-top: 16px;
+}

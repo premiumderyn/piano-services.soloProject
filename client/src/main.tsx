@@ -13,6 +13,8 @@ import { WhyChoose } from './components/WhyChoose/WhyChoose.tsx'
 import { Contact } from './components/Contact/Contact.tsx'
 import { Footer } from './components/Footer/Footer.tsx'
 import { ReviewsCarousel } from './components/ReviewsCarousel/ReviewsCarousel.tsx'
+import { FaqAccordion } from './components/FaqAccordion/FaqAccordion.tsx'
+import './styles/scroll-reveal.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
     <SaleRent />
     <WhyChoose />
     <ReviewsCarousel />
+    <FaqAccordion />
     <Contact />
     <Footer />
   </StrictMode>,

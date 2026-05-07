@@ -76,3 +76,9 @@
     border: 1px solid var(--background-header-main);
   }
 }
+.difference__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

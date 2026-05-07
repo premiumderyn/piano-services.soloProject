@@ -1,15 +1,8 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import styles from './ReviewsCarousel.module.css';
-
-
-
-interface Review {
-  name: string;
-  text: string;
-  date: string;
-  img: string;
-  alt?: string;
-}
+import type Review from '../../types/Review';
+import { DEFAULT_REVIEWS } from './Review.mock';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
 
 interface ReviewsCarouselProps {
   reviews?: Review[];
@@ -17,41 +10,6 @@ interface ReviewsCarouselProps {
   visibleCount?: number;
   gap?: number;
 }
-
-
-
-const DEFAULT_REVIEWS: Review[] = [
-  {
-    name: 'Elizabeth Smith',
-    text: '"I\'m extremely happy with the service. The technicians were quick, professional, and my piano sounds amazing now!"',
-    date: 'January 5, 2025',
-    img: '/img/elizabeth-playing.png',
-    alt: 'Elizabeth Smith',
-  },
-  {
-    name: 'David Mitchell',
-    text: '"I had my piano tuned here, and the service was fantastic. It sounds perfect now, and I will definitely come back for future maintenance."',
-    date: 'November 12, 2024',
-    img: '/img/david-mitchell.png',
-    alt: 'David Mitchell',
-  },
-  {
-    name: 'John Davis',
-    text: '"The repair work on my piano was top-notch. The team was friendly and efficient, and I can\'t recommend them enough!"',
-    date: 'December 28, 2024',
-    img: '/img/john-davis.png',
-    alt: 'John Davis',
-  },
-  {
-    name: 'Sarah Lawson',
-    text: '"Outstanding experience from start to finish. They restored my grandmother\'s piano beautifully — it plays like new."',
-    date: 'February 3, 2025',
-    img: '/img/sarah-lawson.png',
-    alt: 'Sarah Lawson',
-  },
-];
-
-
 
 export function ReviewsCarousel({
   reviews = DEFAULT_REVIEWS,
@@ -63,6 +21,9 @@ export function ReviewsCarousel({
   const [current, setCurrent]               = useState<number>(0);
   const [isTransitioning, setTransitioning] = useState<boolean>(false);
   const [hovering, setHovering]             = useState<boolean>(false);
+
+  // Додаємо анімацію для появи всієї каруселі
+  const carouselRevealRef = useScrollReveal({ animation: 'fade-up', delay: 100 });
 
   const total = reviews.length;
 
@@ -143,59 +104,59 @@ export function ReviewsCarousel({
   const cardWidth = `calc((100% - ${gap * (visibleCount - 1)}px) / ${visibleCount})`;
 
   return (
-    <div className={styles.root}>
-    <div
-      className={styles.carousel}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-    >
-      <button
-        className={`${styles.btn} ${styles.btnPrev}`}
-        onClick={() => move(-1)}
-        aria-label="Попередній відгук"
+    <div ref={carouselRevealRef} className={styles.root}> {/* Додано ref сюди */}
+      <div
+        className={styles.carousel}
+        onMouseEnter={() => setHovering(true)}
+        onMouseLeave={() => setHovering(false)}
       >
-        &#8249;
-      </button>
-
-      <div className={styles.overflow}>
-        <div
-          ref={trackRef}
-          className={styles.track}
-          onTransitionEnd={onTransitionEnd}
+        <button
+          className={`${styles.btn} ${styles.btnPrev}`}
+          onClick={() => move(-1)}
+          aria-label="Попередній відгук"
         >
-          {allCards.map((review, i) => (
-            <div
-              key={i}
-              className={styles.card}
-              style={{
-                width: cardWidth,
-                marginRight: i < allCards.length - 1 ? `${gap}px` : 0,
-                flexShrink: 0,
-                boxSizing: 'border-box',
-              }}
-            >
-              <img
-                className={styles.cardImg}
-                src={review.img}
-                alt={review.alt ?? review.name}
-              />
-              <h3 className={styles.cardName}>{review.name}</h3>
-              <div className={styles.cardLine} />
-              <p className={styles.cardText}>{review.text}</p>
-              <p className={styles.cardDate}>{review.date}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+          &#8249;
+        </button>
 
-      <button
-        className={`${styles.btn} ${styles.btnNext}`}
-        onClick={() => move(1)}
-        aria-label="Наступний відгук"
-      >
-        &#8250;
-      </button>
-    </div>
+        <div className={styles.overflow}>
+          <div
+            ref={trackRef}
+            className={styles.track}
+            onTransitionEnd={onTransitionEnd}
+          >
+            {allCards.map((review, i) => (
+              <div
+                key={i}
+                className={styles.card}
+                style={{
+                  width: cardWidth,
+                  marginRight: i < allCards.length - 1 ? `${gap}px` : 0,
+                  flexShrink: 0,
+                  boxSizing: 'border-box',
+                }}
+              >
+                <img
+                  className={styles.cardImg}
+                  src={review.img}
+                  alt={review.alt ?? review.name}
+                />
+                <h3 className={styles.cardName}>{review.name}</h3>
+                <div className={styles.cardLine} />
+                <p className={styles.cardText}>{review.text}</p>
+                <p className={styles.cardDate}>{review.date}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <button
+          className={`${styles.btn} ${styles.btnNext}`}
+          onClick={() => move(1)}
+          aria-label="Наступний відгук"
+        >
+          &#8250;
+        </button>
+      </div>
     </div>
   );
 }

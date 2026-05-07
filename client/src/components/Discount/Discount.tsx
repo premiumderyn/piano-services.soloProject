@@ -1,9 +1,14 @@
 import styles from './Discount.module.css';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
 
 export function Discount() {
+  // Анімація для центрального блоку
+  const contentRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
+
   return (
     <section className={styles.discount} id="discount__section">
-      <div className={styles.discount__block}>
+      {/* Додано ref для анімації */}
+      <div ref={contentRef} className={styles.discount__block}>
         <p className={styles.discount__subtitle}>~ GET YOUR DISCOUNT ~</p>
         <h3 className={styles.discount__title}>Restore the Perfect Sound</h3>
         <p className={styles.discount__desc}>

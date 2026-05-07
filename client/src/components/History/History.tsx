@@ -1,14 +1,21 @@
 import styles from './History.module.css';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Додано імпорт хука
 
 export function History() {
+  // Картинка з'являється зсувом (наприклад, зліва направо)
+  const imgRef = useScrollReveal({ animation: 'slide-right', delay: 0 });
+  // Текст з'являється зсувом (справа наліво) з невеликою затримкою
+  const contentRef = useScrollReveal({ animation: 'slide-left', delay: 100 });
+
   return (
     <section className={styles.history} id="history__section">
       <img
+        ref={imgRef} // Додано ref для картинки
         className={styles.history__img}
         src="/img/services-collage.png"
         alt="Piano collage"
       />
-      <div className={styles.history__content}>
+      <div ref={contentRef} className={styles.history__content}> {/* Додано ref для тексту */}
         <p className={styles.history__subtitle}>~ HISTORY ~</p>
         <h3 className={styles.history__title}>
           We Truly Believe Every Piano

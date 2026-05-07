@@ -1,33 +1,22 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import styles from './PianoServices.module.css';
-
-
-interface Service {
-  name: string;
-  href: string;
-  img: string;
-  alt: string;
-}
-
-
-
-const SERVICES: Service[] = [
-  { name: 'Piano Restoration', href: '#', img: '/img/piano-restoration.png', alt: 'Restoring piano' },
-  { name: 'Piano Tuning',      href: '#', img: '/img/piano-tuning.png',      alt: 'Tuning piano'    },
-  { name: 'Piano Repair',      href: '#', img: '/img/piano-repair.png',      alt: 'Repairing piano' },
-  // додайте більше карток за потреби
-];
+import type Service from '../../types/Service';
+import { SERVICES } from './Service.mock';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Додано імпорт хука
 
 const VISIBLE = 3;
 const GAP     = 12; // px, має збігатись з gap у CSS
-
-
 
 export function PianoServices() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent]               = useState<number>(0);
   const [isTransitioning, setTransitioning] = useState<boolean>(false);
   const [hovering, setHovering]             = useState<boolean>(false);
+
+  // --- Налаштування Scroll Reveal ---
+  const topRef      = useScrollReveal({ animation: "fade-up", delay: 0 });
+  const carouselRef = useScrollReveal({ animation: "fade-up", delay: 100 });
+  const statsRef    = useScrollReveal({ animation: "fade-up", delay: 200 });
 
   const total = SERVICES.length;
 
@@ -111,8 +100,8 @@ export function PianoServices() {
   return (
     <section className={styles.services} id="services__section">
 
-      {/* ── Заголовок (без змін) ── */}
-      <div className={styles.services__top}>
+      {/* ── Заголовок: додано ref={topRef} ── */}
+      <div ref={topRef} className={styles.services__top}>
         <p className={styles.services__subtitle}>~ SERVICES WE PROVIDE ~</p>
         <h2 className={styles.services__title}>
           Restoring the
@@ -124,8 +113,9 @@ export function PianoServices() {
         </p>
       </div>
 
-      {/* ── Карусель (замість статичного services__list) ── */}
+      {/* ── Карусель: додано ref={carouselRef} ── */}
       <div
+        ref={carouselRef}
         className={styles.services__carousel}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
@@ -178,8 +168,8 @@ export function PianoServices() {
         </button>
       </div>
 
-      {/* ── Статистика (без змін) ── */}
-      <div className={styles.services__stats}>
+      {/* ── Статистика: додано ref={statsRef} ── */}
+      <div ref={statsRef} className={styles.services__stats}>
         <div className={styles.services__stat}>
           <p className={styles.services__number}>
             900<span className={styles.services__text_seprt}>+</span>

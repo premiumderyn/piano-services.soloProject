@@ -1,10 +1,22 @@
 import styles from './SaleRent.module.css';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
 
 export function SaleRent() {
+  // Налаштування анімацій для різних блоків
+  const introRef   = useScrollReveal({ animation: 'slide-right', delay: 0 });
+  const contactRef = useScrollReveal({ animation: 'slide-left', delay: 100 });
+  
+  // Каскадна поява карток (збільшуємо delay для кожної наступної)
+  const card1Ref = useScrollReveal({ animation: 'fade-up', delay: 0 });
+  const card2Ref = useScrollReveal({ animation: 'fade-up', delay: 150 });
+  const card3Ref = useScrollReveal({ animation: 'fade-up', delay: 300 });
+
   return (
     <section className={styles['sale-rent']} id="sale-rent__section">
       <div className={styles['sale-rent__header']}>
-        <div className={styles['sale-rent__intro']}>
+        
+        {/* Текстовий блок — виїжджає зліва */}
+        <div ref={introRef} className={styles['sale-rent__intro']}>
           <p className={styles['sale-rent__subtitle']}>~ SALE & RENT ~</p>
           <h3 className={styles['sale-rent__title']}>
             Perfect
@@ -16,7 +28,8 @@ export function SaleRent() {
           </p>
         </div>
 
-        <div className={styles['sale-rent__contact']}>
+        {/* Блок з фото та телефоном — виїжджає справа */}
+        <div ref={contactRef} className={styles['sale-rent__contact']}>
           <img
             className={styles['sale-rent__image']}
             src="/img/woman-on-the-phone.png"
@@ -28,8 +41,10 @@ export function SaleRent() {
           </div>
         </div>
       </div>
+
       <div className={styles['sale-rent__offers']}>
-        <div className={styles['sale-rent__item']}>
+        {/* Картка 1 */}
+        <div ref={card1Ref} className={styles['sale-rent__item']}>
           <h3 className={styles['sale-rent__heading']}>Grand Pianos</h3>
           <hr className={styles['sale-rent__divider']} />
           <p className={styles['sale-rent__price']}>
@@ -48,7 +63,9 @@ export function SaleRent() {
           </ul>
           <a className={styles['sale-rent__btn']} href="#">Learn More</a>
         </div>
-        <div className={styles['sale-rent__item']}>
+
+        {/* Картка 2 */}
+        <div ref={card2Ref} className={styles['sale-rent__item']}>
           <h3 className={styles['sale-rent__heading']}>Upright Pianos</h3>
           <hr className={styles['sale-rent__divider']} />
           <p className={styles['sale-rent__price']}>
@@ -68,7 +85,9 @@ export function SaleRent() {
           </ul>
           <button className={styles['sale-rent__btn']} id="btn-back-send">Learn More</button>
         </div>
-        <div className={styles['sale-rent__item']}>
+
+        {/* Картка 3 */}
+        <div ref={card3Ref} className={styles['sale-rent__item']}>
           <h3 className={styles['sale-rent__heading']}>Digital Pianos</h3>
           <hr className={styles['sale-rent__divider']} />
           <p className={styles['sale-rent__price']}>

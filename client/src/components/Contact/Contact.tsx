@@ -1,9 +1,13 @@
 import styles from './Contact.module.css';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
 
 export function Contact() {
+  const headerRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
+  const formRef = useScrollReveal({ animation: 'fade-up', delay: 150 });
+
   return (
     <section className={styles.contact} id="contact__section">
-      <div className={styles.contact__header}>
+      <div ref={headerRef} className={styles.contact__header}>
         <h2 className={styles.contact__title}>
           Ready to <span className={styles.contact__highlight}> Restore </span> Your Piano?
         </h2>
@@ -12,15 +16,16 @@ export function Contact() {
         </p>
       </div>
 
-      {/* Оскільки ти використовуєш Formspree, такий варіант працюватиме і в React */}
       <form
-        id="contact-form"
+        ref={formRef}
+        className={styles.form}
         action="https://formspree.io/f/maqpqwnd"
         method="POST"
       >
-        <label>
+        <label className={styles.label}>
           Your email:
           <input
+            className={styles.input}
             type="email"
             name="email"
             id="email"
@@ -29,9 +34,10 @@ export function Contact() {
           />
         </label>
 
-        <label>
+        <label className={styles.label}>
           Your message:
           <textarea
+            className={styles.textarea}
             name="message"
             id="message"
             placeholder="How can we help you?"
@@ -39,11 +45,10 @@ export function Contact() {
           ></textarea>
         </label>
 
-        <button type="submit">Send</button>
+        <button className={styles.button} type="submit">Send</button>
       </form>
 
-      {/* Зверни увагу на подвійні фігурні дужки для інлайн-стилів у React */}
-      <p id="error" style={{ color: 'red' }}></p>
+      <p className={styles.error} style={{ color: 'red' }}></p>
     </section>
   );
 }

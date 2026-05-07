@@ -1,19 +1,32 @@
 import styles from './WhyChoose.module.css';
+import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
 
 export function WhyChoose() {
+  // Анімація для заголовку
+  const headerRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
+  
+  // Каскадна анімація для карток
+  const item1Ref = useScrollReveal({ animation: 'fade-up', delay: 100 });
+  const item2Ref = useScrollReveal({ animation: 'fade-up', delay: 200 });
+  const item3Ref = useScrollReveal({ animation: 'fade-up', delay: 300 });
+  const item4Ref = useScrollReveal({ animation: 'fade-up', delay: 400 });
+
   return (
     <section className={styles.why} id="why__section">
-      <p className={styles.why__subtitle}>~ WHY CHOOSE US ~</p>
-      <h2 className={styles.why__title}>
-        Your Journey to
-        <span className={styles.why__highlight}> Owning a Piano </span> Starts Here
-      </h2>
-      <p className={styles.why__desc}>
-        Discover the unique benefits of working with us.
-      </p>
+      {/* Обгортка для заголовку з анімацією */}
+      <div ref={headerRef}>
+        <p className={styles.why__subtitle}>~ WHY CHOOSE US ~</p>
+        <h2 className={styles.why__title}>
+          Your Journey to
+          <span className={styles.why__highlight}> Owning a Piano </span> Starts Here
+        </h2>
+        <p className={styles.why__desc}>
+          Discover the unique benefits of working with us.
+        </p>
+      </div>
 
       <div className={styles.why__list}>
-        <div className={styles.why__item}>
+        <div ref={item1Ref} className={styles.why__item}>
           <div className={styles.why__image}>
             <img
               className={styles.why__icon}
@@ -28,7 +41,8 @@ export function WhyChoose() {
             </p>
           </div>
         </div>
-        <div className={styles.why__item}>
+        
+        <div ref={item2Ref} className={styles.why__item}>
           <div className={styles.why__image}>
             <img
               className={styles.why__icon}
@@ -41,7 +55,8 @@ export function WhyChoose() {
             <p className={styles.why__text}>Exact tuning and restoration.</p>
           </div>
         </div>
-        <div className={styles.why__item}>
+        
+        <div ref={item3Ref} className={styles.why__item}>
           <div className={styles.why__image}>
             <img
               className={styles.why__icon}
@@ -54,7 +69,8 @@ export function WhyChoose() {
             <p className={styles.why__text}>Trustworthy service you can count on.</p>
           </div>
         </div>
-        <div className={styles.why__item}>
+        
+        <div ref={item4Ref} className={styles.why__item}>
           <div className={styles.why__image}>
             <img
               className={styles.why__icon}
