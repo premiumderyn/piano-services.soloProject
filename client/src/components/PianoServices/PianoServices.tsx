@@ -1,22 +1,20 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
-import styles from './PianoServices.module.css';
-import type Service from '../../types/Service';
-import { SERVICES } from './Service.mock';
-import { useScrollReveal } from '../../hooks/useScrollReveal'; // Додано імпорт хука
-
+import { useRef, useState, useEffect, useCallback } from "react";
+import styles from "./PianoServices.module.css";
+import type Service from "../../types/Service";
+import { useScrollReveal } from "../../hooks/useScrollReveal"; // Додано імпорт хука
+import { getServices } from "../../api/testApi"; // Додано імпорт API функції
 const VISIBLE = 3;
-const GAP     = 12; // px, має збігатись з gap у CSS
+const GAP = 12; // px, має збігатись з gap у CSS
 
 export function PianoServices() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [current, setCurrent]               = useState<number>(0);
+  const [current, setCurrent] = useState<number>(0);
   const [isTransitioning, setTransitioning] = useState<boolean>(false);
-  const [hovering, setHovering]             = useState<boolean>(false);
-
-  // --- Налаштування Scroll Reveal ---
-  const topRef      = useScrollReveal({ animation: "fade-up", delay: 0 });
+  const [hovering, setHovering] = useState<boolean>(false);
+  const [SERVICES, setServices] = useState<Service[]>([]);
+  const topRef = useScrollReveal({ animation: "fade-up", delay: 0 });
   const carouselRef = useScrollReveal({ animation: "fade-up", delay: 100 });
-  const statsRef    = useScrollReveal({ animation: "fade-up", delay: 200 });
+  const statsRef = useScrollReveal({ animation: "fade-up", delay: 200 });
 
   const total = SERVICES.length;
 
@@ -36,37 +34,41 @@ export function PianoServices() {
 
   const getOffset = useCallback(
     (idx: number): number => (idx + VISIBLE) * (getCardWidth() + GAP),
-    [getCardWidth]
+    [getCardWidth],
   );
 
   const jumpTo = useCallback(
     (idx: number): void => {
       const track = trackRef.current;
       if (!track) return;
-      track.style.transition = 'none';
-      track.style.transform  = `translateX(-${getOffset(idx)}px)`;
+      track.style.transition = "none";
+      track.style.transform = `translateX(-${getOffset(idx)}px)`;
       track.getBoundingClientRect(); // reflow
-      track.style.transition = '';
+      track.style.transition = "";
     },
-    [getOffset]
+    [getOffset],
   );
 
   const slideTo = useCallback(
     (idx: number): void => {
       const track = trackRef.current;
       if (!track) return;
-      track.style.transition = 'transform 0.45s cubic-bezier(0.4,0,0.2,1)';
-      track.style.transform  = `translateX(-${getOffset(idx)}px)`;
+      track.style.transition = "transform 0.45s cubic-bezier(0.4,0,0.2,1)";
+      track.style.transform = `translateX(-${getOffset(idx)}px)`;
     },
-    [getOffset]
+    [getOffset],
   );
 
-  useEffect(() => { jumpTo(0); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (SERVICES.length > 0) {
+      jumpTo(0);
+    }
+  }, [SERVICES.length, jumpTo]);
 
   useEffect(() => {
     const onResize = (): void => jumpTo(current);
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, [current, jumpTo]);
 
   const move = useCallback(
@@ -77,14 +79,20 @@ export function PianoServices() {
       setCurrent(next);
       slideTo(next);
     },
-    [current, isTransitioning, slideTo]
+    [current, isTransitioning, slideTo],
   );
 
   const onTransitionEnd = useCallback((): void => {
     setTransitioning(false);
     setCurrent((prev) => {
-      if (prev >= total) { jumpTo(0); return 0; }
-      if (prev < 0)      { jumpTo(total - 1); return total - 1; }
+      if (prev >= total) {
+        jumpTo(0);
+        return 0;
+      }
+      if (prev < 0) {
+        jumpTo(total - 1);
+        return total - 1;
+      }
       return prev;
     });
   }, [total, jumpTo]);
@@ -97,23 +105,34 @@ export function PianoServices() {
 
   const cardWidth = `calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`;
 
+  useEffect(() => {
+    getServices()
+      .then((response) => {
+        if (response.status === "success") {
+          setServices(response.data.services);
+          console.log("Отримані сервіси:", response.data.services);
+        }
+      })
+      .catch((err) => console.error("Помилка завантаження:", err));
+  }, []);
+
   return (
     <section className={styles.services} id="services__section">
-
-      {/* ── Заголовок: додано ref={topRef} ── */}
       <div ref={topRef} className={styles.services__top}>
         <p className={styles.services__subtitle}>~ SERVICES WE PROVIDE ~</p>
         <h2 className={styles.services__title}>
           Restoring the
-          <span className={styles.services__title_highlight}> Soul of Your </span>Piano
+          <span className={styles.services__title_highlight}>
+            {" "}
+            Soul of Your{" "}
+          </span>
+          Piano
         </h2>
         <p className={styles.services__desc}>
           Experience expert piano tuning, restoration, and repair designed to
           bring out the best in your instrument.
         </p>
       </div>
-
-      {/* ── Карусель: додано ref={carouselRef} ── */}
       <div
         ref={carouselRef}
         className={styles.services__carousel}
@@ -142,7 +161,7 @@ export function PianoServices() {
                   width: cardWidth,
                   marginRight: i < allCards.length - 1 ? `${GAP}px` : 0,
                   flexShrink: 0,
-                  boxSizing: 'border-box',
+                  boxSizing: "border-box",
                 }}
               >
                 <h4 className={styles.services__name}>{service.name}</h4>
@@ -168,7 +187,6 @@ export function PianoServices() {
         </button>
       </div>
 
-      {/* ── Статистика: додано ref={statsRef} ── */}
       <div ref={statsRef} className={styles.services__stats}>
         <div className={styles.services__stat}>
           <p className={styles.services__number}>
@@ -197,7 +215,6 @@ export function PianoServices() {
           <p className={styles.services__label}>Customer Satisfaction</p>
         </div>
       </div>
-
     </section>
   );
 }

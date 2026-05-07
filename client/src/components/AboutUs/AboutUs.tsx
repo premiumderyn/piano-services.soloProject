@@ -1,14 +1,11 @@
 import styles from "./AboutUs.module.css";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-
 export function AboutUs() {
-  const introRef     = useScrollReveal({ animation: "fade-up",     delay: 0   });
-  const topRef       = useScrollReveal({ animation: "slide-left",  delay: 100 });
-  const bottomRef    = useScrollReveal({ animation: "slide-right", delay: 100 });
-
+  const introRef = useScrollReveal({ animation: "fade-up", delay: 0 });
+  const topRef = useScrollReveal({ animation: "slide-left", delay: 100 });
+  const bottomRef = useScrollReveal({ animation: "slide-right", delay: 100 });
   return (
     <section className={styles.about} id="about__section">
-
       {/* Заголовок — з'являється знизу */}
       <div ref={introRef} className={styles.about__intro}>
         <p className={styles.about__subtitle}>~ ABOUT US ~</p>
@@ -22,7 +19,6 @@ export function AboutUs() {
       </div>
 
       <div className={styles.about__content}>
-
         {/* Верхній блок — з'їжджає зліва */}
         <div ref={topRef} className={styles.about__content_top}>
           <div className={styles.about__image}>
@@ -32,7 +28,9 @@ export function AboutUs() {
               alt="Black piano"
             />
           </div>
-          <div className={`${styles.about__card} ${styles["about__card--welcome"]}`}>
+          <div
+            className={`${styles.about__card} ${styles["about__card--welcome"]}`}
+          >
             <p className={styles.about__label}>WELCOME HERE</p>
             <h3 className={styles.about__heading}>Making Music Shine Again</h3>
             <hr className={styles.about__pargh_divider} />
@@ -79,7 +77,6 @@ export function AboutUs() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
