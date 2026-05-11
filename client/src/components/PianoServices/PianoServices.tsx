@@ -2,7 +2,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import styles from "./PianoServices.module.css";
 import type Service from "../../types/Service";
 import { useScrollReveal } from "../../hooks/useScrollReveal"; // Додано імпорт хука
-import { getServices } from "../../api/testApi"; // Додано імпорт API функції
+import { getServices } from "../../api/serviceApi"; // Додано імпорт API функції
 const VISIBLE = 3;
 const GAP = 12; // px, має збігатись з gap у CSS
 
@@ -18,7 +18,6 @@ export function PianoServices() {
 
   const total = SERVICES.length;
 
-  // Клони для безперервної каруселі
   const allCards: Service[] = [
     ...SERVICES.slice(-VISIBLE),
     ...SERVICES,

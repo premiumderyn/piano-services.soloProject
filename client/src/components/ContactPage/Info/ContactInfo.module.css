@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mapWrapper {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.details {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid #c9a77c;
+}
+
+.name {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.details p {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.details strong {
+  color: #1a1a1a;
+}

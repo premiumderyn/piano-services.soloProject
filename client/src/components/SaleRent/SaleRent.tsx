@@ -1,15 +1,50 @@
+import { useState, useEffect } from 'react';
 import styles from './SaleRent.module.css';
-import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
+import { useScrollReveal } from '../../hooks/useScrollReveal'; 
+import { getOffers } from '../../api/offerApi'; // Імпортуємо функцію запиту
+
+// Інтерфейс для типізації даних з бекенду
+interface OfferType {
+  _id: string;
+  heading: string;
+  salePrice: string;
+  rentPrice: string;
+  features: string[];
+}
 
 export function SaleRent() {
+  // Стан для збереження даних та статусу завантаження
+  const [offers, setOffers] = useState<OfferType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Отримання даних при монтуванні компонента
+  useEffect(() => {
+    const fetchOffers = async () => {
+      try {
+        const response = await getOffers();
+        // Оскільки твій бекенд-контролер повертає { status: 'success', data: { offers: [...] } }
+        setOffers(response.data.offers); 
+      } catch (error) {
+        console.error('Помилка при завантаженні даних:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchOffers();
+  }, []);
+
   // Налаштування анімацій для різних блоків
   const introRef   = useScrollReveal({ animation: 'slide-right', delay: 0 });
   const contactRef = useScrollReveal({ animation: 'slide-left', delay: 100 });
   
-  // Каскадна поява карток (збільшуємо delay для кожної наступної)
+  // Каскадна поява карток
   const card1Ref = useScrollReveal({ animation: 'fade-up', delay: 0 });
   const card2Ref = useScrollReveal({ animation: 'fade-up', delay: 150 });
   const card3Ref = useScrollReveal({ animation: 'fade-up', delay: 300 });
+
+  // Збираємо рефи в масив
+  const cardRefs = [card1Ref, card2Ref, card3Ref];
 
   return (
     <section className={styles['sale-rent']} id="sale-rent__section">
@@ -43,70 +78,48 @@ export function SaleRent() {
       </div>
 
       <div className={styles['sale-rent__offers']}>
-        {/* Картка 1 */}
-        <div ref={card1Ref} className={styles['sale-rent__item']}>
-          <h3 className={styles['sale-rent__heading']}>Grand Pianos</h3>
-          <hr className={styles['sale-rent__divider']} />
-          <p className={styles['sale-rent__price']}>
-            Sale: Starting at
-            <span className={styles['sale-rent__highlight']}> $8,000</span> <br />
-            Rent: From <span className={styles['sale-rent__highlight']}> $300/month </span>
-          </p>
-          <ul className={styles['sale-rent__list']}>
-            <li className={styles['sale-rent__list-item']}>Rich, full sound;</li>
-            <li className={styles['sale-rent__list-item']}>
-              Available in various finishes;
-            </li>
-            <li className={styles['sale-rent__list-item']}>
-              Includes delivery and tuning.
-            </li>
-          </ul>
-          <a className={styles['sale-rent__btn']} href="#">Learn More</a>
-        </div>
-
-        {/* Картка 2 */}
-        <div ref={card2Ref} className={styles['sale-rent__item']}>
-          <h3 className={styles['sale-rent__heading']}>Upright Pianos</h3>
-          <hr className={styles['sale-rent__divider']} />
-          <p className={styles['sale-rent__price']}>
-            Sale: Starting at
-            <span className={styles['sale-rent__highlight']}> $2,500 </span>
-            <br />
-            Rent: From <span className={styles['sale-rent__highlight']}> $100/month </span>
-          </p>
-          <ul className={styles['sale-rent__list']}>
-            <li className={styles['sale-rent__list-item']}>
-              Durable and space-saving design;
-            </li>
-            <li className={styles['sale-rent__list-item']}>
-              Wide range of brands and styles;
-            </li>
-            <li className={styles['sale-rent__list-item']}>Maintance package included.</li>
-          </ul>
-          <button className={styles['sale-rent__btn']} id="btn-back-send">Learn More</button>
-        </div>
-
-        {/* Картка 3 */}
-        <div ref={card3Ref} className={styles['sale-rent__item']}>
-          <h3 className={styles['sale-rent__heading']}>Digital Pianos</h3>
-          <hr className={styles['sale-rent__divider']} />
-          <p className={styles['sale-rent__price']}>
-            Sale: Starting at
-            <span className={styles['sale-rent__highlight']}> $1,200 </span>
-            <br />
-            Rent: From <span className={styles['sale-rent__highlight']}> $50/month</span>
-          </p>
-          <ul className={styles['sale-rent__list']}>
-            <li className={styles['sale-rent__list-item']}>
-              Built-in speakers and headphone;
-            </li>
-            <li className={styles['sale-rent__list-item']}>Multiple sound settings;</li>
-            <li className={styles['sale-rent__list-item']}>
-              Lightweight and easy to move.
-            </li>
-          </ul>
-          <a className={styles['sale-rent__btn']} href="#">Learn More</a>
-        </div>
+        {/* Показуємо текст завантаження, поки дані не прийшли */}
+        {isLoading ? (
+          <p>Loading offers...</p> 
+        ) : (
+          offers.map((offer, index) => (
+            <div 
+              key={offer._id} 
+              // Якщо карток буде більше 3-х, перевіряємо чи є для них ref
+              ref={cardRefs[index] || null} 
+              className={styles['sale-rent__item']}
+            >
+              <h3 className={styles['sale-rent__heading']}>{offer.heading}</h3>
+              <hr className={styles['sale-rent__divider']} />
+              
+              <p className={styles['sale-rent__price']}>
+                Sale: Starting at
+                <span className={styles['sale-rent__highlight']}> {offer.salePrice} </span>
+                <br />
+                Rent: From <span className={styles['sale-rent__highlight']}> {offer.rentPrice} </span>
+              </p>
+              
+              <ul className={styles['sale-rent__list']}>
+                {offer.features.map((feature, i) => (
+                  <li key={i} className={styles['sale-rent__list-item']}>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Фронтенд-логіка: якщо це друга картка (індекс 1), рендеримо кнопку з id */}
+              {index === 1 ? (
+                <button className={styles['sale-rent__btn']} id="btn-back-send">
+                  Learn More
+                </button>
+              ) : (
+                <a className={styles['sale-rent__btn']} href="#">
+                  Learn More
+                </a>
+              )}
+            </div>
+          ))
+        )}
       </div>
     </section>
   );

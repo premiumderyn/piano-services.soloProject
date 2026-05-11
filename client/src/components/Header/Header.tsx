@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'; // Імпортуємо Link для роутингу
 import styles from './Header.module.css';
 
 export function Header() {
@@ -5,11 +6,14 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.header__main}>
         <div className={styles['header__nav-wrapper']}>
-          <img
-            className={styles.header__logo}
-            src="/img/svg/main-logo.svg" 
-            alt="Maestro Piano Logo"
-          />
+          {/* Клік на логотип зазвичай веде на головну */}
+          <Link to="/">
+            <img
+              className={styles.header__logo}
+              src="/img/svg/main-logo.svg" 
+              alt="Maestro Piano Logo"
+            />
+          </Link>
 
           <nav className={styles.header__nav}>
             <button
@@ -24,19 +28,23 @@ export function Header() {
 
             <ul className={styles.nav__list} id="nav-list">
               <li className={styles.nav__item}>
-                <a className={styles.nav__link} href="#about__section">About Us</a>
+                <a className={styles.nav__link} href="/#about__section">About Us</a>
               </li>
               <li className={styles.nav__item}>
-                <a className={styles.nav__link} href="#services__section">Services</a>
+                <a className={styles.nav__link} href="/#services__section">Services</a>
               </li>
               <li className={styles.nav__item}>
-                <a className={styles.nav__link} href="#history__section">History</a>
+                <a className={styles.nav__link} href="/#history__section">History</a>
               </li>
               <li className={styles.nav__item}>
-                <a className={styles.nav__link} href="#sale-rent__section">Pricing</a>
+                <a className={styles.nav__link} href="/#sale-rent__section">Pricing</a>
               </li>
               <li className={styles.nav__item}>
-                <a className={styles.nav__link} href="#why__section">Benefits</a>
+                <a className={styles.nav__link} href="/#why__section">Benefits</a>
+              </li>
+              {/* Нове посилання на сторінку контактів */}
+              <li className={styles.nav__item}>
+                <Link className={styles.nav__link} to="/contacts">Contacts</Link>
               </li>
             </ul>
             <button
@@ -48,24 +56,7 @@ export function Header() {
             </button>
           </nav>
         </div>
-
-        <div className={styles.header__hero}>
-          <div className={styles.hero}>
-            <h1 className={styles.hero__title}>
-              From <span className={styles.hero__highlight}>Keys</span> to Strings, We Fix Everything
-            </h1>
-          </div>
-          <div className={styles.hero__socials}>
-            <a className={styles['hero__social-link']} href="https://www.instagram.com">INSTAGRAM</a>
-            <a className={styles['hero__social-link']} href="https://www.facebook.com">FACEBOOK</a>
-            <a className={styles['hero__social-link']} href="https://www.youtube.com">YOUTUBE</a>
-            <a className={styles['hero__social-link']} href="https://www.twitter.com">TWITTER</a>
-          </div>
-        </div>
       </div>
-      <section className={styles.header__image}>
-        <div className={styles.header__img}></div>
-      </section>
     </header>
   );
 }

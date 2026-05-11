@@ -1,0 +1,114 @@
+/* ОБГОРТКА: розтягуємо на всю ширину і робимо колонки однакової висоти */
+.section {
+  display: flex;
+  width: 100%;
+  align-items: stretch; /* Обов'язково! Робить висоту карти і форми ідентичною */
+}
+
+/* 1. ЛІВА КОЛОНКА (ЗЕЛЕНИЙ ФОН) */
+/* 1. ЛІВА КОЛОНКА (ЗЕЛЕНИЙ ФОН) */
+.formColumn {
+  flex: 0 0 50%; /* Жорстко 50% ширини */
+  max-width: 50%;
+  background-color: #5e6b52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  box-sizing: border-box; /* Щоб padding не збільшував ширину */
+}
+
+/* 2. ПРАВА КОЛОНКА (КАРТА) */
+.mapColumn {
+  flex: 0 0 50%; /* Жорстко 50% ширини */
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* БЕЖЕВА КАРТКА ФОРМИ */
+.formCard {
+  background-color: #f6f4ee; /* Світло-бежевий колір */
+  padding: 60px 50px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 480px; /* Обмежуємо ширину форми */
+}
+
+.title {
+  font-size: 40px;
+  font-family: serif;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.desc {
+  color: #666;
+  margin-bottom: 35px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  padding: 16px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #b89558;
+}
+
+.submitBtn {
+  padding: 18px;
+  background-color: #b89558; /* Золотий як на макеті */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #a08048;
+}
+
+/* 2. ПРАВА КОЛОНКА (КАРТА) */
+
+.mapColumn iframe {
+  flex: 1; /* Займає 100% доступної висоти свого флекс-контейнера */
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+  }
+  .formColumn {
+    padding: 60px 20px;
+  }
+  .formCard {
+    padding: 40px 20px;
+  }
+  .mapColumn {
+    height: 450px; /* Фіксована висота карти на телефонах */
+  }
+}

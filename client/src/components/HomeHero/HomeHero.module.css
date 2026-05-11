@@ -1,0 +1,100 @@
+/* HomeHero.module.css */
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-header-main); /* Переконайся, що фон співпадає */
+}
+
+/* Блок з текстом та соцмережами */
+.heroContent {
+  display: flex;
+  margin: 0 auto;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 40px 20px; /* Додав трохи відступів, бо раніше вони могли залежати від Header */
+
+  @media (min-width: 1280px) {
+    max-width: 770px;
+    height: 370px;
+    padding: 0;
+  }
+}
+
+.heroText {
+  /* Обгортка для заголовка, щоб зберігати структуру */
+}
+
+/* Заголовок "From Keys to Strings..." */
+.title {
+  text-align: center;
+  font-family: var(--header-font);
+  margin: 15px;
+  font-weight: 400;
+  
+  @media (min-width: 320px) {
+    font-size: 46px;
+  }
+  @media (min-width: 768px) {
+    font-size: 63px;
+    margin: 0;
+  }
+  @media (min-width: 1000px) { /* Було 1000 без px */
+    font-size: 70px;
+  }
+}
+
+.highlight {
+  color: var(--highlight-text);
+}
+
+/* Блок з соцмережами */
+.socials {
+  margin-top: 30px; /* Відступ від заголовка */
+  margin-bottom: 30px;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  
+  @media (min-width: 480px) {
+    flex-direction: row;
+    width: 80%; /* Трохи розширив для кращого вигляду в рядок */
+  }
+}
+
+.socialLink {
+  letter-spacing: 2px;
+  color: var(--top-text-color);
+  font-size: 11px;
+  font-family: var(--paragraph-font);
+  font-weight: 900;
+  display: flex;
+  margin: 5px 0;
+  text-decoration: none; /* Щоб не було підкреслення */
+}
+
+/* Велика фотографія майстра (Hero Image) */
+.heroImageContainer {
+  width: 100%;
+}
+
+.heroImg {
+  height: 30vh;
+  overflow: hidden;
+
+  /* Використовуй правильний шлях до картинки відносно папки public або src/assets */
+  background: url("/img/header-background.png"); 
+  background-attachment: fixed; /* Ефект паралаксу */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    height: 45vh;
+  }
+}

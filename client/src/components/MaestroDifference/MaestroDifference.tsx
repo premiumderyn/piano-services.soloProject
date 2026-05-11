@@ -15,7 +15,7 @@ export function MaestroDifference() {
           Trust Maestro Piano to keep your music alive.
         </p>
         <div className={styles.difference__buttons}>
-          <a className={styles.difference__btn} href="#contact__section">Contact Us</a>
+          <a className={styles.difference__btn} href="contacts">Contact Us</a>
           <a className={styles.difference__btn_opacity} href="#">Our Video</a>
         </div>
       </div>

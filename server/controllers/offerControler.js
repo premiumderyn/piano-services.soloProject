@@ -1,13 +1,14 @@
-const Services = require('../models/serviceModel');
+const Offer = require('../models/offerModel');
 
-exports.getAllServices = async (req, res) => {
+exports.getAllOffers = async (req, res) => {
     try {
-        const services = await Services.find();
+        const offers = await Offer.find();
+        
         res.status(200).json({
             status: 'success',
-            results: services.length,
+            results: offers.length,
             data: {
-                services
+                offers
             }
         });
     } catch (err) {
@@ -16,5 +17,4 @@ exports.getAllServices = async (req, res) => {
             message: err.message
         });
     }
-}
-    
+};

@@ -1,0 +1,33 @@
+.page {
+  /* ВИДАЛИ АБО ЗМІНИ НА 0 цей рядок: */
+  /* padding-top: 100px; */ 
+  padding-top: 0; 
+  background-color: #fcfcfc;
+}
+
+.faqSection {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contactSection {
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

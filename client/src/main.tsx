@@ -1,34 +1,50 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { Header } from './components/Header/Header.tsx'
-import './global.css'
-import App from './App.tsx'
-import { AboutUs } from './components/AboutUs/AboutUs.tsx'
-import { PianoServices } from './components/PianoServices/PianoServices.tsx'
-import { MaestroDifference } from './components/MaestroDifference/MaestroDifference.tsx'
-import { History } from './components/History/History.tsx'
-import { Discount } from './components/Discount/Discount.tsx'
-import { SaleRent } from './components/SaleRent/SaleRent.tsx'
-import { WhyChoose } from './components/WhyChoose/WhyChoose.tsx'
-import { Contact } from './components/Contact/Contact.tsx'
-import { Footer } from './components/Footer/Footer.tsx'
-import { ReviewsCarousel } from './components/ReviewsCarousel/ReviewsCarousel.tsx'
-import { FaqAccordion } from './components/FaqAccordion/FaqAccordion.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+
+import './global.css';
 import './styles/scroll-reveal.css';
+
+// Імпорт загальних компонентів
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+
+// Імпорт сторінок
+import { Home } from './pages/HomePage';
+import { ContactsPage } from './pages/ConctactsPage/ContactsPage';
+
+// Layout - це оболонка для сайту. 
+// <Outlet /> - це місце, куди React Router буде підставляти потрібну сторінку.
+const RootLayout = () => {
+  return (
+    <>
+      <Header />
+      <Outlet /> 
+      <Footer />
+    </>
+  );
+};
+
+// Налаштування маршрутів
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />, // Header та Footer будуть на кожній з цих сторінок
+    children: [
+      {
+        path: '/',
+        element: <Home />,   // Головна сторінка за адресою "/"
+      },
+      {
+        path: '/contacts',
+        element: <ContactsPage />, // Сторінка контактів за адресою "/contacts"
+      }
+    ]
+  }
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Header />
-    <AboutUs />
-    <PianoServices />
-    <MaestroDifference />
-    <History />
-    <Discount />
-    <SaleRent />
-    <WhyChoose />
-    <ReviewsCarousel />
-    <FaqAccordion />
-    <Contact />
-    <Footer />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);

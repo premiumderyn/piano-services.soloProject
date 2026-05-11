@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/api/services', require('./routes/serviceRoutes'));
+app.use('/api/offers', require('./routes/offerRoutes'));
 app.get('/api/hello', (req, res) => {
     res.status(200).json({
         status: 'success',
@@ -69,3 +70,48 @@ mongoose.connect(process.env.DATABASE).then(() => {
 // }).catch(err => {
 //     console.log(err);
 // });
+
+// const Offer = require('./models/offerModel');
+
+// // Дані для завантаження в БД
+// const offersData = [
+//   {
+//     heading: 'Grand Pianos',
+//     salePrice: '$8,000',
+//     rentPrice: '$300/month',
+//     features: [
+//       'Rich, full sound;',
+//       'Available in various finishes;',
+//       'Includes delivery and tuning.'
+//     ]
+//   },
+//   {
+//     heading: 'Upright Pianos',
+//     salePrice: '$2,500',
+//     rentPrice: '$100/month',
+//     features: [
+//       'Durable and space-saving design;',
+//       'Wide range of brands and styles;',
+//       'Maintance package included.'
+//     ]
+//   },
+//   {
+//     heading: 'Digital Pianos',
+//     salePrice: '$1,200',
+//     rentPrice: '$50/month',
+//     features: [
+//       'Built-in speakers and headphone;',
+//       'Multiple sound settings;',
+//       'Lightweight and easy to move.'
+//     ]
+//   }
+// ];
+
+// // Додавання даних в колекцію Offers
+// Offer.insertMany(offersData)
+//   .then(docs => {
+//     console.log('Дані успішно додані:', docs);
+//   })
+//   .catch(err => {
+//     console.log('Помилка при додаванні даних:', err);
+//   });
