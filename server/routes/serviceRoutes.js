@@ -1,11 +1,9 @@
 const express = require('express');
 const pianoServiceController = require('../controllers/pianoServiceController');
-const offerController = require('../controllers/offerControler');
 const router = express.Router();
 
 router.route('/')
   .get(pianoServiceController.getAllServices)
-  .get(offerController.getAllOffers);
 //   .post(pianoServiceController.createService);
 
 // router.route('/:id')

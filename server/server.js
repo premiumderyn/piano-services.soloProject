@@ -16,6 +16,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/api/services', require('./routes/serviceRoutes'));
 app.use('/api/offers', require('./routes/offerRoutes'));
+app.use('/api/bookings', require('./routes/bookingRoutes'));
 app.get('/api/hello', (req, res) => {
     res.status(200).json({
         status: 'success',

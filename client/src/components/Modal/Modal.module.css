@@ -1,0 +1,72 @@
+/* Темний фон на весь екран */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Поверх усього сайту */
+  backdrop-filter: blur(4px); /* Гарний ефект розмиття заднього фону */
+}
+
+/* Саме біле віконце */
+.modal {
+  background-color: #f6f4ee; /* Бежевий фон в стилі сайту */
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Анімація появи */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+}
+
+.title {
+  font-family: serif;
+  font-size: 24px;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #d9534f;
+}
+
+.content {
+  color: #444;
+  line-height: 1.6;
+}

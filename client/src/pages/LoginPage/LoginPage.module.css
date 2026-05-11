@@ -1,0 +1,65 @@
+/* Контейнер на весь екран для центрування форми */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f6f4ee; /* Світло-бежевий фон, як на сторінці контактів */
+  padding: 20px;
+}
+
+/* Картка форми */
+.form {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легка тінь */
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Заголовок */
+.form h2 {
+  text-align: center;
+  font-family: serif;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+/* Поля вводу */
+.input {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #b89558; /* Золотий акцент при кліку */
+  background-color: #ffffff;
+}
+
+/* Кнопка */
+.btn {
+  padding: 15px;
+  background-color: #b89558;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #a08048; /* Трохи темніший золотий при наведенні */
+}

@@ -1,0 +1,170 @@
+/* Основний фон екрану */
+.dashboard {
+  background-color: #f3f4f6; /* М'який сірий фон */
+  min-height: 100vh;
+  padding: 40px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.headerInfo h1 {
+  font-size: 32px;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.headerInfo p {
+  color: #6b7280;
+}
+
+.logoutBtn {
+  padding: 10px 20px;
+  background-color: #b89558;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #a08048;
+}
+
+/* Верхня секція: Статистика і Діаграма */
+.topSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.statsCards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card,
+.chartCard,
+.tableCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h3,
+.chartCard h3,
+.tableCard h3 {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.statNumber {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.statText {
+  font-size: 32px;
+  font-weight: 700;
+  color: #5e6b52;
+}
+
+/* Діаграма */
+.chartWrapper {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noData {
+  color: #9ca3af;
+}
+
+/* Таблиця */
+.tableResponsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f9fafb;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.table tr:hover {
+  background-color: #f9fafb;
+}
+
+.fw500 {
+  font-weight: 500;
+  color: #111827 !important;
+}
+
+/* Бейдж для послуг */
+.serviceBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #fef3c7; /* Світло-жовтий/золотий */
+  color: #92400e;
+  text-transform: capitalize;
+}
+
+.dateCell {
+  font-size: 14px;
+}
+
+.time {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.emptyTable {
+  text-align: center;
+  padding: 40px !important;
+  color: #6b7280;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .topSection {
+    grid-template-columns: 1fr; /* На планшетах одна під одною */
+  }
+}
