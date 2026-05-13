@@ -51,7 +51,6 @@ export function ContactsBottom() {
             as possible.
           </p>
 
-          {/* Якщо успішно відправлено, показуємо повідомлення */}
           {isSuccess ? (
             <div
               style={{
@@ -67,7 +66,7 @@ export function ContactsBottom() {
             <form className={styles.form} onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="name" // Важливо: додаємо атрибут name
+                name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your Name"
@@ -111,7 +110,7 @@ export function ContactsBottom() {
               <button
                 type="submit"
                 className={styles.submitBtn}
-                disabled={isSubmitting} // Вимикаємо кнопку під час відправки
+                disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Book a Service"}
               </button>

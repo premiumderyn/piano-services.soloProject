@@ -1,4 +1,3 @@
-/* Темний фон на весь екран */
 .overlay {
   position: fixed;
   top: 0;
@@ -9,13 +8,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Поверх усього сайту */
-  backdrop-filter: blur(4px); /* Гарний ефект розмиття заднього фону */
+  z-index: 9999;
+  backdrop-filter: blur(4px); 
 }
 
-/* Саме біле віконце */
 .modal {
-  background-color: #f6f4ee; /* Бежевий фон в стилі сайту */
+  background-color: #f6f4ee;
   width: 90%;
   max-width: 500px;
   border-radius: 8px;
@@ -24,7 +22,6 @@
   animation: slideUp 0.3s ease-out;
 }
 
-/* Анімація появи */
 @keyframes slideUp {
   from {
     opacity: 0;

@@ -1,19 +1,17 @@
-/* Контейнер на весь екран для центрування форми */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f6f4ee; /* Світло-бежевий фон, як на сторінці контактів */
+  background-color: #f6f4ee;
   padding: 20px;
 }
 
-/* Картка форми */
 .form {
   background-color: #ffffff;
   padding: 50px 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легка тінь */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 400px;
   display: flex;
@@ -21,7 +19,6 @@
   gap: 20px;
 }
 
-/* Заголовок */
 .form h2 {
   text-align: center;
   font-family: serif;
@@ -30,7 +27,6 @@
   font-size: 32px;
 }
 
-/* Поля вводу */
 .input {
   padding: 15px 20px;
   border: 1px solid #ddd;
@@ -42,11 +38,10 @@
 }
 
 .input:focus {
-  border-color: #b89558; /* Золотий акцент при кліку */
+  border-color: #b89558;
   background-color: #ffffff;
 }
 
-/* Кнопка */
 .btn {
   padding: 15px;
   background-color: #b89558;
@@ -61,5 +56,5 @@
 }
 
 .btn:hover {
-  background-color: #a08048; /* Трохи темніший золотий при наведенні */
+  background-color: #a08048;
 }

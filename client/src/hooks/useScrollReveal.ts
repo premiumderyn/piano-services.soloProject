@@ -4,10 +4,10 @@ type Animation = 'fade-up' | 'fade-down' | 'slide-left' | 'slide-right' | 'fade'
 
 interface UseScrollRevealOptions {
   animation?: Animation;
-  duration?: number;   // ms
-  delay?: number;      // ms
-  threshold?: number;  // 0–1, скільки елемента має бути видно
-  once?: boolean;      // анімувати тільки раз
+  duration?: number;
+  delay?: number; 
+  threshold?: number; 
+  once?: boolean;
 }
 
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>({
@@ -46,13 +46,10 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>({
   return ref;
 }
 
-// ── Stagger-хук для списків ──────────────────────────────────────────────────
-// Приймає кількість дочірніх елементів і застосовує зростаючий delay до кожного
-
 interface UseStaggerRevealOptions {
   animation?: Animation;
   duration?: number;
-  staggerDelay?: number;  // ms між кожним елементом
+  staggerDelay?: number;
   threshold?: number;
   once?: boolean;
 }

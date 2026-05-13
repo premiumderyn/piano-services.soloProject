@@ -1,12 +1,10 @@
-/* HomeHero.module.css */
 
 .heroSection {
   display: flex;
   flex-direction: column;
-  background-color: var(--background-header-main); /* Переконайся, що фон співпадає */
+  background-color: var(--background-header-main); 
 }
 
-/* Блок з текстом та соцмережами */
 .heroContent {
   display: flex;
   margin: 0 auto;
@@ -14,7 +12,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 40px 20px; /* Додав трохи відступів, бо раніше вони могли залежати від Header */
+  padding: 40px 20px;
 
   @media (min-width: 1280px) {
     max-width: 770px;
@@ -23,11 +21,7 @@
   }
 }
 
-.heroText {
-  /* Обгортка для заголовка, щоб зберігати структуру */
-}
 
-/* Заголовок "From Keys to Strings..." */
 .title {
   text-align: center;
   font-family: var(--header-font);
@@ -41,7 +35,7 @@
     font-size: 63px;
     margin: 0;
   }
-  @media (min-width: 1000px) { /* Було 1000 без px */
+  @media (min-width: 1000px) { 
     font-size: 70px;
   }
 }
@@ -50,9 +44,8 @@
   color: var(--highlight-text);
 }
 
-/* Блок з соцмережами */
 .socials {
-  margin-top: 30px; /* Відступ від заголовка */
+  margin-top: 30px;
   margin-bottom: 30px;
   width: 60%;
   text-align: center;
@@ -63,7 +56,7 @@
   
   @media (min-width: 480px) {
     flex-direction: row;
-    width: 80%; /* Трохи розширив для кращого вигляду в рядок */
+    width: 80%;
   }
 }
 
@@ -75,10 +68,9 @@
   font-weight: 900;
   display: flex;
   margin: 5px 0;
-  text-decoration: none; /* Щоб не було підкреслення */
+  text-decoration: none;
 }
 
-/* Велика фотографія майстра (Hero Image) */
 .heroImageContainer {
   width: 100%;
 }
@@ -87,9 +79,9 @@
   height: 30vh;
   overflow: hidden;
 
-  /* Використовуй правильний шлях до картинки відносно папки public або src/assets */
+  
   background: url("/img/header-background.png"); 
-  background-attachment: fixed; /* Ефект паралаксу */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import styles from "./SaleRent.module.css";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { getOffers } from "../../api/offerApi";
@@ -50,7 +50,6 @@ export function SaleRent() {
     setIsModalOpen(true);
   };
 
-  // --- ФУНКЦІЯ ВІДПРАВКИ НА FORMSPREE ---
   const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -58,11 +57,10 @@ export function SaleRent() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // Додаємо інформацію про те, яке піаніно обрав клієнт
     formData.append("Interested In", selectedOffer);
 
     try {
-      // ЗАМІНИ 'YOUR_FORM_ID' НА СВІЙ ID З FORMSPREE! (наприклад: mwkjkxyz)
+    
       const response = await fetch("https://formspree.io/f/maqpqwnd", {
         method: "POST",
         body: formData,
@@ -73,8 +71,8 @@ export function SaleRent() {
 
       if (response.ok) {
         alert("Thank you! Your request has been sent.");
-        setIsModalOpen(false); // Закриваємо модалку при успіху
-        form.reset(); // Очищаємо форму
+        setIsModalOpen(false);
+        form.reset();
       } else {
         alert("Oops! There was a problem submitting your form.");
       }
@@ -188,12 +186,10 @@ export function SaleRent() {
             {selectedOffer}:
           </p>
 
-          {/* ФОРМА З ПІДКЛЮЧЕНИМ ОБРОБНИКОМ */}
           <form
             style={{ display: "flex", flexDirection: "column", gap: "15px" }}
             onSubmit={handleFormSubmit}
           >
-            {/* Обов'язково додаємо атрибути name, щоб Formspree розпізнав поля! */}
             <input
               type="text"
               name="name"

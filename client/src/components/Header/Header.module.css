@@ -124,7 +124,7 @@
         background: none;
         border: none;
         cursor: pointer;
-        z-index: 3000; /* ще вище */
+        z-index: 3000;
       }
 
       .nav__link {
@@ -234,7 +234,7 @@
 }
 .header__nav-wrapper {
   padding-top: 30px;
-  padding-bottom: 30px; /* <--- ДОДАЙ ЦЕЙ РЯДОК */
+  padding-bottom: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -244,6 +244,6 @@
 
   @media (min-width: 768px) {
     flex-direction: column;
-    padding-bottom: 40px; /* <--- Можеш зробити відступ більшим для ПК версії */
+    padding-bottom: 40px; 
   }
 }

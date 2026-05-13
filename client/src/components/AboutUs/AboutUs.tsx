@@ -6,7 +6,6 @@ export function AboutUs() {
   const bottomRef = useScrollReveal({ animation: "slide-right", delay: 100 });
   return (
     <section className={styles.about} id="about__section">
-      {/* Заголовок — з'являється знизу */}
       <div ref={introRef} className={styles.about__intro}>
         <p className={styles.about__subtitle}>~ ABOUT US ~</p>
         <h2 className={styles.about__title}>
@@ -19,7 +18,6 @@ export function AboutUs() {
       </div>
 
       <div className={styles.about__content}>
-        {/* Верхній блок — з'їжджає зліва */}
         <div ref={topRef} className={styles.about__content_top}>
           <div className={styles.about__image}>
             <img
@@ -45,7 +43,6 @@ export function AboutUs() {
           </div>
         </div>
 
-        {/* Нижній блок — з'їжджає справа */}
         <div ref={bottomRef} className={styles.about__content_bottom}>
           <div className={styles.about__quote}>
             <hr className={styles.about__divider} />

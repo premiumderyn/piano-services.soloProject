@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Імпортуємо Link для роутингу
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 export function Header() {
@@ -6,7 +6,6 @@ export function Header() {
     <header className={styles.header}>
       <div className={styles.header__main}>
         <div className={styles['header__nav-wrapper']}>
-          {/* Клік на логотип зазвичай веде на головну */}
           <Link to="/">
             <img
               className={styles.header__logo}
@@ -42,7 +41,6 @@ export function Header() {
               <li className={styles.nav__item}>
                 <a className={styles.nav__link} href="/#why__section">Benefits</a>
               </li>
-              {/* Нове посилання на сторінку контактів */}
               <li className={styles.nav__item}>
                 <Link className={styles.nav__link} to="/contacts">Contacts</Link>
               </li>

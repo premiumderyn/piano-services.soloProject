@@ -4,23 +4,20 @@
   background-color: #f6f4ee;
 }
 
-/* Ліва колонка з фото */
-/* Ліва колонка з фото */
 .imageWrapper {
-  flex: 0 0 50%; /* Жорстко 50% ширини */
+  flex: 0 0 50%;
   max-width: 50%;
   display: flex;
 }
 
-/* Права колонка з текстом FAQ */
 .faqContent {
-  flex: 0 0 50%; /* Жорстко 50% ширини */
+  flex: 0 0 50%;
   max-width: 50%;
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box; /* Щоб padding не збільшував ширину */
+  box-sizing: border-box;
 }
 
 .image {

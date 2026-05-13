@@ -1,11 +1,8 @@
 import styles from './WhyChoose.module.css';
-import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export function WhyChoose() {
-  // Анімація для заголовку
   const headerRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
-  
-  // Каскадна анімація для карток
   const item1Ref = useScrollReveal({ animation: 'fade-up', delay: 100 });
   const item2Ref = useScrollReveal({ animation: 'fade-up', delay: 200 });
   const item3Ref = useScrollReveal({ animation: 'fade-up', delay: 300 });
@@ -13,7 +10,6 @@ export function WhyChoose() {
 
   return (
     <section className={styles.why} id="why__section">
-      {/* Обгортка для заголовку з анімацією */}
       <div ref={headerRef}>
         <p className={styles.why__subtitle}>~ WHY CHOOSE US ~</p>
         <h2 className={styles.why__title}>

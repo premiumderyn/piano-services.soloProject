@@ -1,5 +1,5 @@
 export default interface Service {
-  _id: string; // MongoDB використовує _id
+  _id: string;
   name: string;
   href: string;
   img: string;

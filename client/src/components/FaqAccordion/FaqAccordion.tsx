@@ -2,9 +2,8 @@ import { useState } from 'react';
 import styles from './FaqAccordion.module.css';
 import type FaqItem from '../../types/Faq';
 import { DEFAULT_FAQS } from './Faq.mock';
-import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
+import { useScrollReveal } from '../../hooks/useScrollReveal'; 
 
-// ─── Типи ───────────────────────────────────────────────────────────────────
 
 interface FaqAccordionProps {
   items?: FaqItem[];
@@ -23,7 +22,6 @@ export function FaqAccordion({
 }: FaqAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Анімації для заголовку та списку питань
   const headerRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
   const listRef = useScrollReveal({ animation: 'fade-up', delay: 150 });
 

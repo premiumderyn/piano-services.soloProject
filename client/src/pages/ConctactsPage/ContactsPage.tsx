@@ -1,9 +1,7 @@
 import styles from './ContactsPage.module.css';
 import { ContactsHero } from '../../components/ContactPage/Hero/ContactHero';
 import { ContactsFaq } from '../../components/ContactPage/Faq/ContactFaq';
-// import { ContactsForm } from '../../components/ContactPage/Form/ContactForm';
-// import { ContactsInfo } from '../../components/ContactPage/Info/ContactInfo';
-import { ContactsBottom } from '../../components/ContactPage/ContactsBottom/ContactsBottom'; // <--- Новий компонент
+import { ContactsBottom } from '../../components/ContactPage/ContactsBottom/ContactsBottom';
 
 export function ContactsPage() {
   return (

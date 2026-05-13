@@ -165,13 +165,6 @@
         .about__icon {
           color: var(--top-text-color);
         }
-        /* .about__divider::after {
-          background: var(--highlight-text);
-          content: "§";
-          padding: 0 4px;
-          position: relative;
-          top: -13px;
-        } */
       }
       .about__image {
         @media (min-width: 1000px) {

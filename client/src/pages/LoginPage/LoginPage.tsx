@@ -9,7 +9,6 @@ export function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Захардкоджені дані
     if (login === 'admin' && password === 'admin123') {
       localStorage.setItem('isAdmin', 'true');
       navigate('/admin');

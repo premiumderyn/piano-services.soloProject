@@ -1,8 +1,7 @@
 import styles from './Discount.module.css';
-import { useScrollReveal } from '../../hooks/useScrollReveal'; // Імпорт хука
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export function Discount() {
-  // Анімація для центрального блоку
   const contentRef = useScrollReveal({ animation: 'fade-up', delay: 0 });
 
   return (

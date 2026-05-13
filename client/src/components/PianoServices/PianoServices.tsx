@@ -4,7 +4,7 @@ import type Service from "../../types/Service";
 import { useScrollReveal } from "../../hooks/useScrollReveal"; // Додано імпорт хука
 import { getServices } from "../../api/serviceApi"; // Додано імпорт API функції
 const VISIBLE = 3;
-const GAP = 12; // px, має збігатись з gap у CSS
+const GAP = 12;
 
 export function PianoServices() {
   const trackRef = useRef<HTMLDivElement>(null);

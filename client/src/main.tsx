@@ -5,18 +5,14 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./global.css";
 import "./styles/scroll-reveal.css";
 
-// Імпорт загальних компонентів
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 
-// Імпорт сторінок
 import { Home } from "./pages/HomePage";
 import { ContactsPage } from "./pages/ConctactsPage/ContactsPage";
 import { AdminPage } from "./pages/AdminPage/AdminPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 
-// Layout - це оболонка для сайту.
-// <Outlet /> - це місце, куди React Router буде підставляти потрібну сторінку.
 const RootLayout = () => {
   return (
     <>
@@ -27,12 +23,11 @@ const RootLayout = () => {
   );
 };
 
-// Налаштування маршрутів
+
 const router = createBrowserRouter([
-  // 1. Група для звичайних сторінок (з Хедером та Футером)
   {
     path: "/",
-    element: <RootLayout />, // Тут є <Header /> і <Footer />
+    element: <RootLayout />,
     children: [
       {
         path: "/",
@@ -45,14 +40,13 @@ const router = createBrowserRouter([
     ],
   },
 
-  // 2. Окремі маршрути без Хедера та Футера
   {
     path: "/login",
-    element: <LoginPage />, // Просто сторінка, без RootLayout
+    element: <LoginPage />,
   },
   {
     path: "/admin",
-    element: <AdminPage />, // Просто сторінка, без RootLayout
+    element: <AdminPage />,
   },
 ]);
 

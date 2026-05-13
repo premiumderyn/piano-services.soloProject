@@ -6,7 +6,6 @@ export function MaestroDifference() {
 
   return (
     <section className={styles.difference} id="difference__section">
-      {/* Додано клас difference__content */}
       <div ref={contentRef} className={styles.difference__content}>
         <p className={styles.difference__subtitle}>~ DISCOVER THE MAESTRO DIFFERENCE ~</p>
         <h2 className={styles.difference__title}>Take Care of Your Piano!</h2>

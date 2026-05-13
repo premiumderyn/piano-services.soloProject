@@ -10,7 +10,6 @@ import {
 } from "recharts";
 import styles from "./AdminPage.module.css";
 
-// Кольори для нашої діаграми (в стилі твого сайту)
 const COLORS = ["#b89558", "#5e6b52", "#8c907e", "#2a2a2a"];
 
 export function AdminPage() {
@@ -34,8 +33,6 @@ export function AdminPage() {
     navigate("/login");
   };
 
-  // --- Підготовка даних для діаграми ---
-  // Рахуємо кількість замовлень по кожній послузі
   const serviceStats = bookings.reduce((acc: any, booking: any) => {
     const serviceName =
       booking.service.charAt(0).toUpperCase() + booking.service.slice(1);
@@ -43,7 +40,6 @@ export function AdminPage() {
     return acc;
   }, {});
 
-  // Форматуємо для Recharts: [{ name: 'Tuning', value: 5 }, ...]
   const chartData = Object.keys(serviceStats).map((key) => ({
     name: key,
     value: serviceStats[key],
@@ -51,7 +47,6 @@ export function AdminPage() {
 
   return (
     <div className={styles.dashboard}>
-      {/* Шапка адмінки */}
       <header className={styles.header}>
         <div className={styles.headerInfo}>
           <h1>Dashboard</h1>
@@ -62,9 +57,7 @@ export function AdminPage() {
         </button>
       </header>
 
-      {/* Верхній блок: Статистика + Діаграма */}
       <div className={styles.topSection}>
-        {/* Картки зі швидкою статистикою */}
         <div className={styles.statsCards}>
           <div className={styles.card}>
             <h3>Total Bookings</h3>
@@ -80,7 +73,6 @@ export function AdminPage() {
           </div>
         </div>
 
-        {/* Діаграма */}
         <div className={styles.chartCard}>
           <h3>Bookings by Service</h3>
           <div className={styles.chartWrapper}>
@@ -91,7 +83,7 @@ export function AdminPage() {
                     data={chartData}
                     cx="50%"
                     cy="50%"
-                    innerRadius={60} // Робить дірку всередині (Doughnut)
+                    innerRadius={60}
                     outerRadius={80}
                     paddingAngle={5}
                     dataKey="value"
