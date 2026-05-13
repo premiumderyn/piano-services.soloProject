@@ -17,30 +17,6 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use('/api/services', require('./routes/serviceRoutes'));
 app.use('/api/offers', require('./routes/offerRoutes'));
 app.use('/api/bookings', require('./routes/bookingRoutes'));
-app.get('/api/hello', (req, res) => {
-    res.status(200).json({
-        status: 'success',
-        message: 'Hello from the server!'
-    });
-});
-
-const testData = require('../testData/piano.json');
-
-app.post('/api/data', (req, res) => {
-    const newId = testData[testData.length - 1].id + 1;
-    const newData = Object.assign({ id: newId }, req.body);
-    testData.push(newData);
-    fs.writeFile(`${__dirname}/../testData/piano.json`, JSON.stringify(testData),
-        err => {
-            if (err) return res.status(500).json({ status: 'error', message: err });
-
-            res.status(201).json({
-                status: 'success',
-                data: newData
-            });
-        });
-});
-
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
