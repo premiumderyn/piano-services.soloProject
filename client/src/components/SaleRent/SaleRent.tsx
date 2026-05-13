@@ -28,7 +28,6 @@ export function SaleRent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState<string>("");
 
-  // Стан для відображення процесу відправки
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -53,14 +52,10 @@ export function SaleRent() {
   const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     const form = e.currentTarget;
     const formData = new FormData(form);
-
     formData.append("Interested In", selectedOffer);
-
     try {
-    
       const response = await fetch("https://formspree.io/f/maqpqwnd", {
         method: "POST",
         body: formData,
@@ -68,7 +63,6 @@ export function SaleRent() {
           Accept: "application/json",
         },
       });
-
       if (response.ok) {
         alert("Thank you! Your request has been sent.");
         setIsModalOpen(false);

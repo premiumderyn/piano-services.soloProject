@@ -17,16 +17,14 @@ export function ContactsFaq() {
 
   return (
     <section className={styles.section}>
-      {/* Ліва частина з фотографією */}
       <div className={styles.imageWrapper}>
         <img 
-          src="/img/white-keys-playing.png" /* Заміни на правильний шлях до своєї картинки */
+          src="/img/white-keys-playing.png" 
           alt="Child playing piano" 
           className={styles.image} 
         />
       </div>
 
-      {/* Права частина з питаннями */}
       <div className={styles.faqContent}>
         <p className={styles.label}>— FAQ —</p>
         <h2 className={styles.title}>
@@ -49,7 +47,6 @@ export function ContactsFaq() {
                   <span className={styles.icon}>{isOpen ? '−' : '+'}</span>
                 </button>
                 
-                {/* Анімація відкриття відповіді */}
                 <div
                   className={styles.answerWrap}
                   style={{ maxHeight: isOpen ? '200px' : '0px' }}

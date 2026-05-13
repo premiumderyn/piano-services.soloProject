@@ -11,14 +11,12 @@
 [data-reveal='slide-right']{ transform: translateX(50px); }
 [data-reveal='fade']       { transform: none; }
 
-/* ── Фінальний стан (після появи) ── */
 
 [data-reveal].is-revealed {
   opacity: 1;
   transform: none;
 }
 
-/* ── Для користувачів які вимкнули анімації ── */
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] {

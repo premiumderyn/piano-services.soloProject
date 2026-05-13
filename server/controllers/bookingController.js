@@ -20,7 +20,7 @@ exports.createBooking = async (req, res) => {
 
 exports.getAllBookings = async (req, res) => {
     try {
-        const bookings = await Booking.find().sort('-createdAt'); // Нові зверху
+        const bookings = await Booking.find().sort('-createdAt');
         res.status(200).json({
             status: 'success',
             results: bookings.length,

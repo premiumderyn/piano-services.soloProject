@@ -106,7 +106,6 @@ export function AdminPage() {
         </div>
       </div>
 
-      {/* Блок з таблицею */}
       <div className={styles.tableCard}>
         <h3>Recent Bookings</h3>
         <div className={styles.tableResponsive}>
@@ -127,7 +126,6 @@ export function AdminPage() {
                   <td>{b.phone}</td>
                   <td>{b.email}</td>
                   <td>
-                    {/* Стилізований бейдж для послуги */}
                     <span className={styles.serviceBadge}>{b.service}</span>
                   </td>
                   <td className={styles.dateCell}>
