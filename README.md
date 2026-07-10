@@ -2,10 +2,6 @@
 
 The promotional landing page for piano tuning, repair, and restoration services. This project demonstrates modern **HTML5** and **CSS3** techniques, focusing on semantic structure and responsive web design.
 
-## 🚀 Live Demo
-
-[![Open Website](https://img.shields.io/badge/Open_Website-Piano_Services-blue?style=for-the-badge&logo=google-chrome)](https://premiumderyn.github.io/piano-services.soloProject/)
-
 ## 🌟 Key Features
 
 * **Responsive Design:** Fully adaptive layout that looks great on mobile, tablets, and desktops (using Media Queries, Flexbox, and CSS Grid).
